@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta name="theme-color" content="#7c3aed" />
+<title>پرشیا شاپ | فروشگاه مدرن ایرانی</title>
+<meta name="description" content="پرشیا شاپ؛ مقایسه‌گر و راهنمای خرید فارسی برای جستجوی واقعی کالا در فروشگاه‌های اینترنتی ایرانی، بدون قیمت یا محصول ساختگی." />
+<meta name="author" content="امیرمحمد گلستان" />
+<meta name="creator" content="امیرمحمد گلستان" />
+<meta name="copyright" content="پرشیا شاپ © امیرمحمد گلستان" />
+<meta name="application-name" content="پرشیا شاپ" />
+<meta name="ai-usage-policy" content="این برنامه متعلق به امیرمحمد گلستان است و هرگونه بهره برداری و کپی، پیگرد قانونی دارد." />
+<!--
+  پرشیا شاپ | Persia Shop
+  توسعه‌دهنده: امیرمحمد گلستان
+  یادداشت مالکیت: کپی، بازنویسی یا ارسال این پروژه به ابزارهای هوش مصنوعی بدون اجازه مالک مجاز نیست.
+  اطلاعیه: این برنامه متعلق به امیرمحمد گلستان است و هرگونه بهره برداری و کپی، پیگرد قانونی دارد.
+-->
+<link rel="manifest" href="data:application/json,{}" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<style id="themeStyle">
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+        --primary:#7c3aed;--primary-light:#a78bfa;--primary-dark:#5b21b6;
+        --secondary:#f59e0b;--gold:#fbbf24;--gold-dark:#d97706;
+        --accent:#ec4899;--sky:#8b5cf6;
+        --bg:#f5f3ff;--card:#ffffff;--card2:#faf5ff;
+        --text:#1e1b4b;--text2:#6b21a8;--text3:#8b5cf6;
+        --border:#e9d5ff;--border2:#ede9fe;
+        --green:#10b981;--red:#ef4444;--rose:#f43f5e;
+        --shadow:0 8px 30px rgba(91,33,182,.12);
+        --shadow-hover:0 16px 50px rgba(91,33,182,.22);
+        --radius:24px;--radius-s:16px;
+        --gradient:linear-gradient(135deg,#7c3aed 0%,#a78bfa 45%,#f59e0b 100%);
+        --gradient-gold:linear-gradient(135deg,#f59e0b,#fbbf24);
+        --header-h:58px;--nav-h:64px;
+        --t:all .35s cubic-bezier(.34,1.56,.64,1);
+        --font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;
+    }
+    body{background:var(--bg);color:var(--text);transition:var(--t);overflow-x:hidden;height:100vh;display:flex;flex-direction:column;font-family:var(--font-family);}
+    ::-webkit-scrollbar{width:6px;height:6px;}
+    ::-webkit-scrollbar-track{background:transparent;}
+    ::-webkit-scrollbar-thumb{background:var(--primary);border-radius:10px;}
+    body.dark{--bg:#0c0a1e;--card:#1a1630;--card2:#24204a;--text:#f0edff;--text2:#c4b5fd;--text3:#8b7dcf;--border:#2d2668;--border2:#312c6b;--shadow:0 8px 30px rgba(0,0,0,.5);--shadow-hover:0 16px 50px rgba(0,0,0,.7);}
+    body.theme-cocoa{--primary:#8D6E63;--primary-light:#A1887F;--primary-dark:#5D4037;--secondary:#D4A574;--gold:#C8A97E;--bg:#F5F0EB;--card:#FFFDF9;--card2:#F5F0EB;--text:#3E2C1B;--text2:#6D4C41;--text3:#A1887F;--border:#D7CCC8;--gradient:linear-gradient(135deg,#8D6E63 0%,#A1887F 45%,#D4A574 100%);}
+    body.theme-green{--primary:#2E7D32;--primary-light:#66BB6A;--primary-dark:#1B5E20;--secondary:#FFB74D;--gold:#FFD54F;--bg:#F1F8E9;--card:#FFFFFF;--card2:#F9FBE7;--text:#1B3A1B;--text2:#33691E;--text3:#689F38;--border:#C5E1A5;--gradient:linear-gradient(135deg,#2E7D32 0%,#66BB6A 45%,#FFB74D 100%);}
+    body.theme-blue{--primary:#1565C0;--primary-light:#42A5F5;--primary-dark:#0D47A1;--secondary:#FFCA28;--gold:#FFD54F;--bg:#E3F2FD;--card:#FFFFFF;--card2:#E8F5E9;--text:#0D2137;--text2:#1565C0;--text3:#42A5F5;--border:#90CAF9;--gradient:linear-gradient(135deg,#1565C0 0%,#42A5F5 45%,#FFCA28 100%);}
+    body.theme-gold{--primary:#F9A825;--primary-light:#FFCA28;--primary-dark:#F57F17;--secondary:#7C4DFF;--gold:#FFD54F;--bg:#FFFDE7;--card:#FFFFFF;--card2:#FFF8E1;--text:#3E2C1B;--text2:#7C4DFF;--text3:#B39DDB;--border:#FFE082;--gradient:linear-gradient(135deg,#F9A825 0%,#FFCA28 45%,#7C4DFF 100%);}
+    body.theme-rose{--primary:#C62828;--primary-light:#EF5350;--primary-dark:#B71C1C;--secondary:#FF8A65;--gold:#FFAB91;--bg:#FCE4EC;--card:#FFFFFF;--card2:#F8BBD0;--text:#3E1A1A;--text2:#AD1457;--text3:#E91E63;--border:#F48FB1;--gradient:linear-gradient(135deg,#C62828 0%,#EF5350 45%,#FF8A65 100%);}
+    body.font-vazir{font-family:'Vazirmatn','Segoe UI',Tahoma,sans-serif;}
+    body.font-tahoma{font-family:Tahoma,'Segoe UI',Tahoma,sans-serif;}
+    body.font-iran{font-family:'IRANSans','Vazirmatn','Segoe UI',Tahoma,sans-serif;}
+    body.font-yekan{font-family:'Yekan','Vazirmatn','Segoe UI',Tahoma,sans-serif;}
+</style>
+<style>
+    /* ===== هدر ===== */
+    .header{background:var(--card);padding:9px 16px;position:sticky;top:0;z-index:100;box-shadow:var(--shadow);border-bottom:1px solid var(--border);flex-shrink:0;backdrop-filter:blur(20px);}
+    .header .top{display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto;gap:10px;}
+    .header .logo{display:flex;align-items:center;gap:10px;cursor:pointer;}
+    .header .logo .ic{width:38px;height:38px;background:var(--gradient);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;box-shadow:0 6px 20px rgba(124,58,237,.35);transition:var(--t);}
+    .header .logo:hover .ic{transform:scale(1.06) rotate(-5deg);}
+    .header .logo .tx{font-size:18px;font-weight:900;line-height:1.1;}
+    .header .logo .tx .p{color:var(--primary-dark);}
+    .header .logo .tx .s{color:var(--secondary);}
+    .header .logo .sb{font-size:9px;color:var(--text3);font-weight:500;}
+    .header .actions{display:flex;align-items:center;gap:2px;}
+    .header .actions button{background:none;border:none;color:var(--text2);font-size:17px;cursor:pointer;padding:8px 11px;border-radius:12px;transition:var(--t);position:relative;}
+    .header .actions button:hover{background:var(--border);color:var(--text);}
+    /* ===== صفحه‌ها ===== */
+    .page{display:none;flex:1;padding:14px 14px calc(var(--nav-h) + 22px);max-width:1100px;margin:0 auto;width:100%;animation:fade .4s ease;}
+    .page.active{display:block;}
+    @keyframes fade{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
+    /* ===== جعبه جستجوی قهرمان ===== */
+    .hero{background:var(--gradient);border-radius:28px;padding:28px 26px;color:#fff;position:relative;overflow:hidden;margin-bottom:16px;box-shadow:0 16px 40px rgba(124,58,237,.28);}
+    .hero .deco{position:absolute;inset:0;opacity:.5;background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="82" cy="40" r="34" fill="rgba(255,255,255,0.05)"/><circle cx="64" cy="26" r="18" fill="rgba(255,255,255,0.04)"/><circle cx="90" cy="72" r="13" fill="rgba(255,255,255,0.05)"/></svg>') no-repeat left center/contain;pointer-events:none;}
+    .hero h2{font-size:22px;font-weight:900;position:relative;}
+    .hero h2 .g{color:var(--gold);}
+    .hero p{font-size:13px;opacity:.9;margin-top:3px;position:relative;}
+    .hero .searchbox{display:flex;gap:8px;margin-top:16px;position:relative;flex-wrap:wrap;}
+    .hero .searchbox input{flex:1;min-width:160px;padding:14px 20px;border-radius:40px;border:none;background:rgba(255,255,255,.96);color:var(--text);font-size:14px;outline:none;font-family:inherit;box-shadow:0 4px 15px rgba(0,0,0,.1);}
+    .hero .searchbox input::placeholder{color:var(--text3);}
+    .hero .searchbox .go{padding:14px 28px;border-radius:40px;border:none;background:var(--gold);color:#3d2b00;font-weight:900;font-size:14px;cursor:pointer;transition:var(--t);display:flex;align-items:center;gap:8px;box-shadow:0 6px 20px rgba(0,0,0,.18);}
+    .hero .searchbox .go:hover{transform:scale(1.04) translateY(-2px);}
+    .hero .chips{display:flex;gap:7px;margin-top:12px;flex-wrap:wrap;position:relative;}
+    .hero .chips .chip{background:rgba(255,255,255,.15);color:#fff;padding:6px 14px;border-radius:30px;font-size:11.5px;cursor:pointer;transition:var(--t);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(4px);}
+    .hero .chips .chip:hover{background:rgba(255,255,255,.3);transform:translateY(-2px);}
+    /* ===== سکشن تایتل ===== */
+    .sec-title{display:flex;align-items:center;gap:9px;margin:22px 2px 12px;font-size:17px;font-weight:800;}
+    .sec-title .bar{width:6px;height:24px;background:var(--gradient);border-radius:6px;}
+    .sec-title .more{margin-right:auto;font-size:12px;font-weight:600;color:var(--primary);cursor:pointer;transition:var(--t);}
+    .sec-title .more:hover{text-decoration:underline;color:var(--secondary);}
+    /* ===== کاشی دسته‌بندی ===== */
+    .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+    .cat-tile{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px 8px;text-align:center;cursor:pointer;transition:var(--t);box-shadow:var(--shadow);}
+    .cat-tile:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);border-color:var(--primary);background:var(--card2);}
+    .cat-tile .em{font-size:28px;}
+    .cat-tile .nm{font-size:12px;font-weight:800;margin-top:6px;color:var(--text);}
+    .cat-tile .cnt{font-size:9px;color:var(--text3);margin-top:2px;}
+    /* ===== اسکرول افقی ===== */
+    .hscroll{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x mandatory;scrollbar-width:none;}
+    .hscroll::-webkit-scrollbar{display:none;}
+    .hscroll>*{scroll-snap-align:start;flex:0 0 auto;}
+    /* ===== کارت فروشگاه ===== */
+    .shop-card{width:160px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px;cursor:pointer;transition:var(--t);box-shadow:var(--shadow);position:relative;overflow:hidden;}
+    .shop-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-hover);border-color:var(--primary-light);}
+    .shop-card .fav{position:absolute;top:10px;left:10px;font-size:16px;color:var(--text3);cursor:pointer;background:var(--card2);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:var(--t);border:1px solid var(--border);}
+    .shop-card .fav.on{color:var(--rose);background:rgba(244,63,94,.1);border-color:var(--rose);}
+    .shop-card .fav:hover{transform:scale(1.15);}
+    .shop-card .em{width:54px;height:54px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:10px;transition:var(--t);}
+    .shop-card:hover .em{transform:scale(1.05) rotate(-4deg);}
+    .shop-card .nm{font-size:14px;font-weight:800;}
+    .shop-card .desc{font-size:10px;color:var(--text2);margin-top:4px;line-height:1.5;height:28px;overflow:hidden;}
+    .shop-card .rt{display:flex;align-items:center;justify-content:space-between;margin-top:10px;}
+    .shop-card .stars{font-size:10px;color:var(--gold);display:flex;align-items:center;gap:2px;}
+    .shop-card .tag{font-size:8.5px;background:rgba(124,58,237,.12);color:var(--primary);padding:2px 9px;border-radius:20px;font-weight:700;}
+    /* ===== گرید فروشگاه‌ها ===== */
+    .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px;}
+    /* ===== فیلتر دسته ===== */
+    .filter-bar{display:flex;gap:10px;overflow-x:auto;padding-bottom:10px;scrollbar-width:none;}
+    .filter-bar::-webkit-scrollbar{display:none;}
+    .filter-bar .fb{flex:0 0 auto;padding:10px 18px;border-radius:40px;border:1px solid var(--border);background:var(--card);color:var(--text2);font-size:12px;font-weight:700;cursor:pointer;transition:var(--t);display:flex;align-items:center;gap:6px;}
+    .filter-bar .fb:hover{border-color:var(--primary);color:var(--text);background:var(--card2);}
+    .filter-bar .fb.active{background:var(--gradient);color:#fff;border-color:transparent;box-shadow:0 4px 16px rgba(124,58,237,.3);}
+    /* ===== کارت تخفیف ===== */
+    .deal-card{width:240px;background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;cursor:pointer;transition:var(--t);box-shadow:var(--shadow);}
+    .deal-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover);}
+    .deal-card .ph{height:100px;display:flex;align-items:center;justify-content:center;font-size:46px;position:relative;}
+    .deal-card .ph .off{position:absolute;top:10px;right:10px;background:var(--rose);color:#fff;font-size:11px;font-weight:900;padding:4px 12px;border-radius:30px;box-shadow:0 4px 10px rgba(244,63,94,.3);}
+    .deal-card .body{padding:12px 14px;}
+    .deal-card .body .t{font-size:13px;font-weight:700;line-height:1.5;}
+    .deal-card .body .from{font-size:10px;color:var(--text3);margin-top:3px;}
+    .deal-card .body .pr{display:flex;align-items:center;gap:8px;margin-top:8px;}
+    .deal-card .body .pr .now{font-size:14px;font-weight:900;color:var(--primary);}
+    .deal-card .body .pr .old{font-size:11px;color:var(--text3);text-decoration:line-through;}
+    /* ===== آمار ===== */
+    .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+    .stat-card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:16px 8px;text-align:center;box-shadow:var(--shadow);transition:var(--t);}
+    .stat-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover);}
+    .stat-card .ic{font-size:24px;}
+    .stat-card .num{font-size:20px;font-weight:900;margin-top:4px;color:var(--primary-dark);}
+    .stat-card .lbl{font-size:10px;color:var(--text2);margin-top:2px;}
+    /* ===== نظرات ===== */
+    .review-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px 20px;margin-bottom:16px;box-shadow:var(--shadow);}
+    .review-header .score{display:flex;align-items:center;gap:10px;}
+    .review-header .score .num{font-size:28px;font-weight:900;color:var(--primary);}
+    .review-header .score .stars{font-size:20px;color:var(--gold);}
+    .review-header .score .label{font-size:13px;color:var(--text2);}
+    .review-header .count{font-size:13px;color:var(--text3);}
+    .review-grid{display:grid;gap:16px;margin-bottom:16px;}
+    .review-card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:18px;box-shadow:var(--shadow);transition:var(--t);}
+    .review-card:hover{box-shadow:var(--shadow-hover);}
+    .review-card .rv-head{display:flex;align-items:center;gap:12px;}
+    .review-card .rv-avatar{width:44px;height:44px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:20px;flex-shrink:0;}
+    .review-card .rv-info{flex:1;}
+    .review-card .rv-name{font-weight:800;font-size:14px;}
+    .review-card .rv-stars{color:var(--gold);font-size:12px;margin-top:2px;}
+    .review-card .rv-text{font-size:13px;color:var(--text2);margin-top:10px;line-height:1.7;}
+    .review-card .rv-actions{display:flex;gap:14px;margin-top:12px;border-top:1px solid var(--border);padding-top:10px;flex-wrap:wrap;}
+    .review-card .rv-actions button{background:none;border:none;cursor:pointer;display:flex;align-items:center;gap:4px;font-size:13px;color:var(--text3);transition:var(--t);padding:4px 8px;border-radius:30px;}
+    .review-card .rv-actions button:hover{background:var(--border);color:var(--text);}
+    .review-card .rv-actions button.liked{color:var(--primary);}
+    .review-card .rv-actions button.disliked{color:var(--red);}
+    .review-card .rv-actions .count{font-weight:700;}
+    .review-card .rv-replies{padding-right:20px;margin-top:12px;border-right:2px solid var(--border);}
+    .review-card .rv-reply{background:var(--card2);border-radius:14px;padding:12px 14px;margin-bottom:8px;}
+    .review-card .rv-reply .rv-head{display:flex;align-items:center;gap:10px;}
+    .review-card .rv-reply .rv-avatar{width:32px;height:32px;font-size:14px;}
+    .review-card .rv-reply .rv-name{font-weight:700;font-size:13px;}
+    .review-card .rv-reply .rv-text{font-size:12px;color:var(--text2);margin-top:6px;}
+    .review-form{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:20px;box-shadow:var(--shadow);margin-top:16px;}
+    .review-form .title{font-weight:700;font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+    .review-form .star-rating{display:flex;gap:6px;margin-bottom:12px;direction:ltr;}
+    .review-form .star-rating .star{font-size:28px;cursor:pointer;color:var(--text3);transition:var(--t);}
+    .review-form .star-rating .star.active{color:var(--gold);}
+    .review-form .star-rating .star:hover{transform:scale(1.2);}
+    .review-form textarea{width:100%;padding:12px 16px;border-radius:14px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-size:14px;font-family:inherit;outline:none;transition:var(--t);min-height:80px;resize:vertical;}
+    .review-form textarea:focus{border-color:var(--primary);}
+    .review-form .submit-btn{margin-top:10px;padding:10px 28px;border-radius:40px;border:none;background:var(--gradient);color:#fff;font-weight:700;cursor:pointer;transition:var(--t);}
+    .review-form .submit-btn:hover{transform:scale(1.04);}
+    .review-form .reply-to{font-size:12px;color:var(--text2);margin-bottom:8px;display:flex;justify-content:space-between;}
+    .review-form .reply-to .cancel{color:var(--red);cursor:pointer;font-weight:700;}
+    /* ===== مقایسه ===== */
+    .cmp-panel{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:20px;box-shadow:var(--shadow);margin-bottom:16px;}
+    .cmp-panel .row{display:flex;gap:10px;flex-wrap:wrap;}
+    .cmp-panel .row input{flex:1;min-width:180px;padding:14px 20px;border-radius:40px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-size:14px;outline:none;font-family:inherit;transition:var(--t);}
+    .cmp-panel .row input:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(124,58,237,.1);}
+    .cmp-panel .row .btn{padding:14px 28px;border-radius:40px;border:none;background:var(--gradient);color:#fff;font-weight:800;font-size:14px;cursor:pointer;transition:var(--t);display:flex;align-items:center;gap:7px;box-shadow:0 6px 20px rgba(124,58,237,.25);}
+    .cmp-panel .row .btn:hover{transform:scale(1.04);}
+    .cmp-panel .hint{font-size:11px;color:var(--text2);margin-top:10px;display:flex;align-items:center;gap:6px;}
+    .pick-label{font-size:12px;font-weight:700;color:var(--text2);margin:16px 0 10px;display:flex;align-items:center;gap:7px;justify-content:space-between;}
+    .pick-label .sel-acts{display:flex;gap:8px;font-size:11px;font-weight:600;}
+    .pick-label .sel-acts span{color:var(--primary);cursor:pointer;transition:var(--t);}
+    .pick-label .sel-acts span:hover{text-decoration:underline;color:var(--secondary);}
+    .pick-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;}
+    .pick{border:2px solid var(--border);border-radius:16px;padding:10px 6px;text-align:center;cursor:pointer;transition:var(--t);background:var(--card2);position:relative;}
+    .pick:hover{border-color:var(--primary);transform:translateY(-2px);}
+    .pick.on{border-color:var(--primary);background:rgba(124,58,237,.08);box-shadow:0 0 0 3px rgba(124,58,237,.15);}
+    .pick .em{font-size:22px;}
+    .pick .nm{font-size:11px;font-weight:700;margin-top:4px;}
+    .pick .chk{position:absolute;top:6px;left:6px;width:18px;height:18px;border-radius:50%;background:var(--primary);color:#fff;font-size:10px;display:none;align-items:center;justify-content:center;}
+    .pick.on .chk{display:flex;}
+    .cmp-results{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-top:8px;}
+    .cmp-card{background:var(--card);border:1px solid var(--border);border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:var(--t);display:flex;flex-direction:column;}
+    .cmp-card:hover{box-shadow:var(--shadow-hover);}
+    .cmp-card .ch{display:flex;align-items:center;gap:10px;padding:12px 14px;border-bottom:1px solid var(--border);background:var(--card2);}
+    .cmp-card .ch .em{width:36px;height:36px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+    .cmp-card .ch .inf{flex:1;min-width:0;}
+    .cmp-card .ch .inf .nm{font-size:14px;font-weight:800;}
+    .cmp-card .ch .inf .url{font-size:9px;color:var(--text3);direction:ltr;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-family:monospace;}
+    .cmp-card .ch .acts{display:flex;gap:4px;}
+    .cmp-card .ch .acts button{background:none;border:none;color:var(--text2);cursor:pointer;width:32px;height:32px;border-radius:10px;transition:var(--t);font-size:14px;}
+    .cmp-card .ch .acts button:hover{background:var(--border);color:var(--text);}
+    .cmp-card .frame-wrap{height:320px;position:relative;background:var(--bg);}
+    .cmp-card .frame-wrap iframe{width:100%;height:100%;border:none;background:#fff;}
+    .cmp-card .frame-wrap .ovly{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:var(--bg);color:var(--text2);text-align:center;padding:14px;transition:var(--t);}
+    .cmp-card .frame-wrap .ovly.hide{opacity:0;pointer-events:none;}
+    .cmp-card .frame-wrap .ovly .sp{width:36px;height:36px;border:3px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite;}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .cmp-card .cf{padding:12px 14px;border-top:1px solid var(--border);display:flex;gap:8px;}
+    .cmp-card .cf .lnk{flex:1;padding:10px;border-radius:14px;border:1px dashed var(--border);background:var(--card2);color:var(--text2);font-size:10px;direction:ltr;text-align:center;font-family:monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;cursor:pointer;transition:var(--t);}
+    .cmp-card .cf .lnk:hover{border-color:var(--primary);color:var(--primary);background:var(--border);}
+    .cmp-card .cf .btn-g{padding:10px 16px;border-radius:14px;border:none;background:var(--gradient-gold);color:#3d2b00;font-weight:800;font-size:11.5px;cursor:pointer;transition:var(--t);display:flex;align-items:center;gap:5px;white-space:nowrap;}
+    .cmp-card .cf .btn-g:hover{transform:scale(1.05);}
+    /* ===== بیننده سایت ===== */
+    .viewer{position:fixed;inset:0;background:var(--bg);z-index:500;display:none;flex-direction:column;}
+    .viewer.open{display:flex;animation:fade .3s ease;}
+    .viewer .vbar{display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--card);border-bottom:1px solid var(--border);box-shadow:var(--shadow);flex-shrink:0;}
+    .viewer .vbar .back{background:none;border:none;font-size:22px;color:var(--text);cursor:pointer;width:40px;height:40px;border-radius:12px;transition:var(--t);}
+    .viewer .vbar .back:hover{background:var(--border);}
+    .viewer .vbar .v-em{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;}
+    .viewer .vbar .v-nm{font-size:15px;font-weight:800;}
+    .viewer .vbar .v-url{flex:1;font-size:10px;color:var(--text3);direction:ltr;font-family:monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;}
+    .viewer .vbar .v-acts{display:flex;gap:2px;}
+    .viewer .vbar .v-acts button{background:none;border:none;color:var(--text2);cursor:pointer;width:36px;height:36px;border-radius:10px;font-size:15px;transition:var(--t);}
+    .viewer .vbar .v-acts button:hover{background:var(--border);color:var(--text);}
+    .viewer .vframe{flex:1;position:relative;background:#fff;}
+    .viewer .vframe iframe{width:100%;height:100%;border:none;}
+    .viewer .vframe .ovly{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:var(--bg);color:var(--text2);text-align:center;padding:20px;transition:var(--t);}
+    .viewer .vframe .ovly.hide{opacity:0;pointer-events:none;}
+    .viewer .vframe .ovly .sp{width:44px;height:44px;border:4px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin .8s linear infinite;}
+    .viewer .vframe .ovly .big-em{font-size:52px;}
+    .viewer .vframe .ovly .t{font-size:16px;font-weight:700;color:var(--text);}
+    .viewer .vframe .ovly .s{font-size:12px;max-width:340px;line-height:1.7;}
+    .viewer .vframe .ovly .b{padding:12px 28px;border-radius:40px;border:none;background:var(--gradient);color:#fff;font-weight:700;cursor:pointer;transition:var(--t);display:inline-flex;gap:7px;align-items:center;}
+    .viewer .vframe .ovly .b:hover{transform:scale(1.04);}
+    /* ===== مودال لینک ===== */
+    .link-modal{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(12px);z-index:600;display:none;align-items:center;justify-content:center;padding:20px;}
+    .link-modal.open{display:flex;}
+    .link-modal .box{background:var(--card);border-radius:28px;padding:28px 24px;max-width:440px;width:100%;animation:fade .4s cubic-bezier(.34,1.56,.64,1);position:relative;}
+    .link-modal .box .ic{width:64px;height:64px;border-radius:20px;background:var(--gradient-gold);display:flex;align-items:center;justify-content:center;font-size:30px;margin:0 auto 14px;color:#3d2b00;}
+    .link-modal .box h3{text-align:center;font-size:18px;font-weight:800;}
+    .link-modal .box p{text-align:center;font-size:12px;color:var(--text2);margin-top:4px;}
+    .link-modal .box .addr{margin-top:16px;padding:14px;border-radius:16px;border:1px dashed var(--border);background:var(--card2);direction:ltr;text-align:left;font-family:monospace;font-size:11px;color:var(--primary-dark);word-break:break-all;line-height:1.6;}
+    .link-modal .box .acts{display:flex;gap:10px;margin-top:18px;}
+    .link-modal .box .acts button{flex:1;padding:14px;border-radius:40px;border:none;font-weight:700;font-size:13px;cursor:pointer;transition:var(--t);display:flex;align-items:center;justify-content:center;gap:6px;}
+    .link-modal .box .acts .cp{background:var(--gradient);color:#fff;}
+    .link-modal .box .acts .cp:hover{transform:scale(1.03);}
+    .link-modal .box .acts .op{background:var(--card2);border:1.5px solid var(--border)!important;color:var(--text);}
+    .link-modal .box .acts .op:hover{border-color:var(--primary)!important;}
+    .link-modal .box .close-x{position:absolute;top:12px;left:12px;background:var(--card2);border:none;width:32px;height:32px;border-radius:50%;font-size:16px;color:var(--text2);cursor:pointer;transition:var(--t);}
+    .link-modal .box .close-x:hover{background:var(--border);transform:rotate(90deg);}
+    /* ===== نوار ناوبری پایین ===== */
+    .navbar{position:fixed;bottom:0;left:0;right:0;height:var(--nav-h);background:var(--card);border-top:1px solid var(--border);display:flex;z-index:200;box-shadow:0 -6px 30px rgba(0,0,0,.06);max-width:1100px;margin:0 auto;}
+    .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:var(--text3);cursor:pointer;transition:var(--t);position:relative;font-size:10px;font-weight:600;-webkit-tap-highlight-color:transparent;}
+    .nav-item .ic{font-size:20px;transition:var(--t);pointer-events:none;}
+    .nav-item:hover{color:var(--primary);}
+    .nav-item.active{color:var(--primary);}
+    .nav-item.active .ic{transform:translateY(-2px) scale(1.12);}
+    .nav-item.active::before{content:'';position:absolute;top:0;width:30px;height:3px;background:var(--gradient);border-radius:0 0 6px 6px;}
+    .nav-item .badge{position:absolute;top:6px;left:50%;margin-left:4px;background:var(--rose);color:#fff;font-size:8px;font-weight:700;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:2px solid var(--card);}
+    .nav-fab{background:var(--gradient);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;cursor:pointer;transition:var(--t);box-shadow:0 8px 28px rgba(124,58,237,.4);align-self:center;margin:0 4px;border:none;-webkit-tap-highlight-color:transparent;}
+    .nav-fab:hover{transform:translateY(-4px) scale(1.06);}
+    /* ===== منوی کشویی ===== */
+    .menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);backdrop-filter:blur(12px);z-index:400;opacity:0;pointer-events:none;transition:all .4s;}
+    .menu-overlay.open{opacity:1;pointer-events:all;}
+    .menu-side{position:fixed;top:0;right:0;bottom:0;width:360px;max-width:86vw;background:var(--card);z-index:401;padding:28px 22px;transform:translateX(100%);transition:all .5s cubic-bezier(.34,1.56,.64,1);box-shadow:-20px 0 60px rgba(0,0,0,.12);overflow-y:auto;border-left:1px solid var(--border);}
+    .menu-side.open{transform:translateX(0);}
+    .menu-side .close-menu{position:absolute;top:14px;left:14px;background:none;border:none;font-size:24px;color:var(--text2);cursor:pointer;padding:4px 9px;border-radius:12px;transition:var(--t);}
+    .menu-side .close-menu:hover{background:var(--border);transform:rotate(90deg);}
+    .profile{text-align:center;padding:16px 0 20px;border-bottom:1px solid var(--border);}
+    .profile .avatar{width:74px;height:74px;border-radius:50%;background:var(--gradient);display:flex;align-items:center;justify-content:center;font-size:32px;color:#fff;margin:0 auto 10px;box-shadow:0 8px 28px rgba(124,58,237,.32);transition:var(--t);}
+    .profile .avatar:hover{transform:scale(1.05) rotate(-5deg);}
+    .profile .name{font-size:17px;font-weight:800;}
+    .profile .email{font-size:12px;color:var(--text2);}
+    .profile .status{font-size:11px;color:var(--green);margin-top:4px;}
+    .profile .status .dt{display:inline-block;width:8px;height:8px;background:var(--green);border-radius:50%;margin-left:5px;animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+    .profile .login-btn{margin-top:12px;padding:10px 28px;border-radius:40px;border:none;background:var(--gradient);color:#fff;font-weight:700;cursor:pointer;transition:var(--t);box-shadow:0 6px 20px rgba(124,58,237,.25);}
+    .profile .login-btn:hover{transform:scale(1.04);}
+    .profile .logout-btn{margin-top:6px;padding:7px 22px;border-radius:40px;border:1px solid var(--border);background:transparent;color:var(--text2);font-weight:600;cursor:pointer;transition:var(--t);}
+    .profile .logout-btn:hover{border-color:var(--red);color:var(--red);}
+    .creator{text-align:center;padding:16px 0;margin:14px 0 16px;background:linear-gradient(135deg,rgba(124,58,237,.07),rgba(251,191,36,.07));border-radius:18px;border:1px solid var(--border);position:relative;overflow:hidden;}
+    .creator::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg,transparent,rgba(124,58,237,.04),transparent,rgba(251,191,36,.04),transparent);animation:cglow 8s linear infinite;}
+    @keyframes cglow{to{transform:rotate(360deg)}}
+    .creator .lbl{font-size:9px;color:var(--text2);letter-spacing:1px;position:relative;}
+    .creator .nm{font-size:18px;font-weight:900;color:var(--primary-dark);position:relative;margin-top:2px;}
+    .creator .nm span{color:var(--secondary);}
+    .creator .heart{color:var(--rose);display:inline-block;animation:hb 1.5s infinite;}
+    @keyframes hb{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+    .creator .insp{font-size:10px;color:var(--text2);margin-top:5px;position:relative;}
+    .creator .insp b{color:var(--accent);}
+    .menu-items{padding:4px 0;}
+    .menu-items .st{font-size:10px;color:var(--text2);letter-spacing:1px;padding:10px 12px 4px;display:flex;align-items:center;gap:8px;}
+    .menu-items .st::after{content:'';flex:1;height:1px;background:var(--border);}
+    .menu-items .item{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:14px;color:var(--text);transition:var(--t);cursor:pointer;margin-bottom:2px;}
+    .menu-items .item:hover{background:var(--border);transform:translateX(-4px);}
+    .menu-items .item .ic{font-size:16px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:var(--bg);border-radius:12px;color:var(--primary);transition:var(--t);}
+    .menu-items .item:hover .ic{transform:scale(1.1);}
+    .menu-items .item .tx{font-weight:500;font-size:13px;flex:1;}
+    .menu-items .item .arr{color:var(--text3);font-size:12px;}
+    .menu-items .item .tg{font-size:8px;background:var(--rose);color:#fff;padding:2px 8px;border-radius:12px;margin-right:6px;}
+    /* ===== تنظیمات ===== */
+    .settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+    .settings-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:16px;box-shadow:var(--shadow);}
+    .settings-card .label{font-weight:700;font-size:14px;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+    .settings-card .options{display:flex;gap:8px;flex-wrap:wrap;}
+    .settings-card .options .opt{padding:6px 14px;border-radius:30px;border:2px solid var(--border);background:var(--bg);color:var(--text2);cursor:pointer;transition:var(--t);font-size:12px;font-weight:600;}
+    .settings-card .options .opt:hover{border-color:var(--primary);color:var(--text);}
+    .settings-card .options .opt.active{border-color:var(--primary);background:var(--primary);color:#fff;}
+    .theme-sample{width:20px;height:20px;border-radius:50%;display:inline-block;margin-left:4px;vertical-align:middle;border:1px solid var(--border);}
+    /* ===== هوش مصنوعی پاپ‌آپ ===== */
+    .ai-popup{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(14px);z-index:500;display:none;align-items:center;justify-content:center;padding:20px;}
+    .ai-popup.open{display:flex;}
+    .ai-popup .box{background:var(--card);border-radius:28px;padding:28px 24px;max-width:500px;width:100%;max-height:80vh;overflow-y:auto;animation:fade .4s cubic-bezier(.34,1.56,.64,1);}
+    .ai-popup .box .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+    .ai-popup .box .hd h2{font-size:20px;display:flex;align-items:center;gap:8px;}
+    .ai-popup .box .hd .close{background:none;border:none;font-size:26px;color:var(--text2);cursor:pointer;padding:4px 8px;border-radius:12px;transition:var(--t);}
+    .ai-popup .box .hd .close:hover{background:var(--border);transform:rotate(90deg);}
+    .ai-popup .box .ai-q{background:var(--card2);border:1px solid var(--border);border-radius:14px;padding:12px 16px;cursor:pointer;transition:var(--t);margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+    .ai-popup .box .ai-q:hover{transform:translateX(-4px);border-color:var(--primary);}
+    .ai-popup .box .ai-q .qic{font-size:20px;}
+    .ai-popup .box .ai-q .qtext{font-weight:600;font-size:13px;}
+    .ai-popup .box .answer-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin-top:16px;min-height:80px;}
+    .ai-popup .box .answer-box .label{font-size:11px;color:var(--text3);margin-bottom:6px;}
+    .ai-popup .box .answer-box .response{font-size:14px;line-height:1.8;color:var(--text);}
+    .ai-popup .box .answer-box .typing-indicator{display:flex;gap:4px;padding:6px 0;}
+    .ai-popup .box .answer-box .typing-indicator span{width:8px;height:8px;background:var(--primary);border-radius:50%;animation:typing 1.4s infinite both;}
+    .ai-popup .box .answer-box .typing-indicator span:nth-child(2){animation-delay:.2s;}
+    .ai-popup .box .answer-box .typing-indicator span:nth-child(3){animation-delay:.4s;}
+    @keyframes typing{0%{transform:scale(1);opacity:.4}50%{transform:scale(1.3);opacity:1}100%{transform:scale(1);opacity:.4}}
+    .ai-popup .box .answer-box .cursor{display:inline-block;width:2px;height:1.1em;background:var(--primary);margin-right:2px;animation:blink .8s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+    /* ===== راهنمای تعاملی ===== */
+    .tour-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:900;display:none;align-items:center;justify-content:center;}
+    .tour-overlay.open{display:flex;}
+    .tour-box{background:var(--card);border-radius:28px;padding:32px 28px;max-width:420px;width:90%;box-shadow:0 20px 60px rgba(0,0,0,.4);animation:fade .4s ease;position:relative;}
+    .tour-box .step-indicator{display:flex;gap:6px;justify-content:center;margin-bottom:16px;}
+    .tour-box .step-indicator .dot{width:8px;height:8px;border-radius:50%;background:var(--border);transition:var(--t);}
+    .tour-box .step-indicator .dot.active{background:var(--primary);width:24px;}
+    .tour-box .icon{font-size:48px;text-align:center;margin-bottom:12px;}
+    .tour-box h3{text-align:center;font-size:18px;font-weight:800;margin-bottom:6px;}
+    .tour-box p{text-align:center;font-size:13px;color:var(--text2);line-height:1.7;}
+    .tour-box .actions{display:flex;gap:10px;margin-top:18px;justify-content:center;}
+    .tour-box .actions button{padding:10px 24px;border-radius:40px;border:none;font-weight:700;cursor:pointer;transition:var(--t);}
+    .tour-box .actions .next{background:var(--gradient);color:#fff;}
+    .tour-box .actions .next:hover{transform:scale(1.04);}
+    .tour-box .actions .prev{background:var(--bg);border:1px solid var(--border);color:var(--text2);}
+    .tour-box .actions .prev:hover{background:var(--border);}
+    .tour-box .actions .skip{background:none;color:var(--text3);font-size:12px;}
+    .tour-box .actions .skip:hover{color:var(--text);}
+    /* ===== مودال احراز هویت ===== */
+    .auth-modal{position:fixed;inset:0;background:rgba(0,0,0,.5);backdrop-filter:blur(14px);z-index:700;display:none;align-items:center;justify-content:center;padding:20px;}
+    .auth-modal.open{display:flex;}
+    .auth-modal .box{background:var(--card);border-radius:30px;padding:34px 28px;max-width:400px;width:100%;animation:fade .45s cubic-bezier(.34,1.56,.64,1);}
+    .auth-modal .hd{display:flex;justify-content:space-between;align-items:center;padding-bottom:16px;border-bottom:1px solid var(--border);}
+    .auth-modal .hd h2{font-size:20px;}
+    .auth-modal .hd .close{font-size:26px;cursor:pointer;background:none;border:none;color:var(--text2);padding:4px 9px;border-radius:12px;transition:var(--t);}
+    .auth-modal .hd .close:hover{background:var(--border);transform:rotate(90deg);}
+    .auth-modal .fg{margin-bottom:14px;}
+    .auth-modal .fg label{display:block;font-size:12.5px;font-weight:600;color:var(--text2);margin-bottom:4px;}
+    .auth-modal .fg input{width:100%;padding:12px 16px;border-radius:16px;border:2px solid var(--border);background:var(--bg);color:var(--text);font-size:14px;outline:none;font-family:inherit;transition:var(--t);}
+    .auth-modal .fg input:focus{border-color:var(--primary);}
+    .auth-modal .submit{width:100%;padding:14px;border-radius:40px;border:none;background:var(--gradient);color:#fff;font-size:15px;font-weight:800;cursor:pointer;transition:var(--t);}
+    .auth-modal .submit:hover{transform:scale(1.02);}
+    .auth-modal .sw{text-align:center;margin-top:14px;font-size:13px;color:var(--text2);}
+    .auth-modal .sw span{color:var(--primary);cursor:pointer;font-weight:700;}
+    /* ===== اعلان ===== */
+    .notif{position:fixed;top:74px;right:16px;max-width:360px;width:90%;background:var(--card);border-radius:18px;padding:16px 20px;box-shadow:0 12px 50px rgba(0,0,0,.16);border:1px solid var(--border);z-index:300;transform:translateX(calc(100% + 30px));transition:all .5s cubic-bezier(.34,1.56,.64,1);display:flex;gap:12px;}
+    .notif.show{transform:translateX(0);}
+    .notif .ic{font-size:28px;flex-shrink:0;}
+    .notif .ct{flex:1;}
+    .notif .ct .t{font-weight:800;font-size:14px;}
+    .notif .ct .m{font-size:12.5px;color:var(--text2);margin-top:2px;}
+    .notif .ct .tm{font-size:10px;color:var(--text3);margin-top:4px;display:block;}
+    .notif .x{background:none;border:none;color:var(--text3);cursor:pointer;font-size:16px;}
+    /* ===== اسنک ===== */
+    .snackbar{position:fixed;bottom:calc(var(--nav-h) + 18px);left:50%;transform:translateX(-50%) translateY(80px);padding:12px 28px;border-radius:40px;font-size:13px;font-weight:700;z-index:800;opacity:0;transition:all .5s cubic-bezier(.34,1.56,.64,1);box-shadow:0 8px 36px rgba(0,0,0,.18);max-width:90vw;text-align:center;}
+    .snackbar.show{opacity:1;transform:translateX(-50%) translateY(0);}
+    .snackbar.success{background:linear-gradient(135deg,#10b981,#34d399);color:#fff;}
+    .snackbar.error{background:linear-gradient(135deg,#ef4444,#f87171);color:#fff;}
+    .snackbar.info{background:var(--gradient);color:#fff;}
+    /* ===== خالی ===== */
+    .empty{text-align:center;padding:50px 20px;color:var(--text3);}
+    .empty .em{font-size:54px;opacity:.5;}
+    .empty .t{font-size:15px;font-weight:700;margin-top:10px;color:var(--text2);}
+    .empty .s{font-size:12px;margin-top:4px;}
+    .empty .b{margin-top:16px;padding:12px 28px;border-radius:40px;border:none;background:var(--gradient);color:#fff;font-weight:700;cursor:pointer;transition:var(--t);}
+    .empty .b:hover{transform:scale(1.04);}
+    .footer-note{text-align:center;padding:20px 10px 8px;color:var(--text3);font-size:10.5px;line-height:1.8;}
+    .footer-note b{color:var(--primary-dark);}
+    .footer-note .insp{color:var(--secondary);font-weight:700;}
+    /* ===== اسپلش ===== */
+    .splash{position:fixed;inset:0;background:var(--gradient);z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;transition:all .8s cubic-bezier(.34,1.56,.64,1);overflow:hidden;}
+    .splash::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(255,255,255,.08) 0%,transparent 60%);animation:glow 6s ease-in-out infinite alternate;}
+    @keyframes glow{0%{transform:translate(-10%,-10%) scale(1);opacity:.3}100%{transform:translate(10%,10%) scale(1.5);opacity:.6}}
+    .splash.hide{opacity:0;transform:scale(1.05);pointer-events:none;}
+    .splash .particles{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+    .splash .particles span{position:absolute;width:4px;height:4px;background:rgba(255,255,255,.2);border-radius:50%;animation:pf linear infinite;}
+    @keyframes pf{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.8}90%{opacity:.8}100%{transform:translateY(-10vh) scale(1);opacity:0}}
+    .splash .logo{font-size:78px;position:relative;z-index:1;animation:bounce 1.6s ease-in-out infinite;filter:drop-shadow(0 10px 30px rgba(0,0,0,.3));}
+    @keyframes bounce{0%,100%{transform:scale(1) rotate(0)}25%{transform:scale(1.06) rotate(-4deg)}75%{transform:scale(1.06) rotate(4deg)}}
+    .splash h1{color:#fff;font-size:42px;font-weight:900;letter-spacing:3px;margin-top:8px;z-index:1;text-shadow:0 0 30px rgba(251,191,36,.3);}
+    .splash h1 span{color:var(--gold);}
+    .splash .sub{color:rgba(255,255,255,.7);font-size:13px;letter-spacing:6px;margin-top:4px;z-index:1;}
+    .splash .loader{margin-top:30px;width:190px;height:4px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden;position:relative;z-index:1;}
+    .splash .loader .bar{position:absolute;inset:0 100% 0 0;background:var(--gold);border-radius:4px;animation:loadBar 2.6s ease-in-out forwards;}
+    @keyframes loadBar{0%{inset:0 100% 0 0}100%{inset:0 0 0 0}}
+    .splash .ver{position:absolute;bottom:36px;color:rgba(255,255,255,.35);font-size:11px;letter-spacing:3px;z-index:1;}
+    /* ===== ریسپانسیو ===== */
+    @media(max-width:768px){
+        :root{--header-h:52px;}
+        .hero{padding:22px 16px;border-radius:22px;}
+        .hero h2{font-size:19px;}
+        .cat-grid{grid-template-columns:repeat(4,1fr);gap:10px;}
+        .cat-tile{padding:12px 4px;border-radius:16px;}
+        .cat-tile .em{font-size:24px;}
+        .cat-tile .nm{font-size:10px;}
+        .stat-grid{grid-template-columns:repeat(2,1fr);}
+        .shop-grid{grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:12px;}
+        .cmp-results{grid-template-columns:1fr;}
+        .splash h1{font-size:32px;}
+        .splash .logo{font-size:60px;}
+        .settings-grid{grid-template-columns:1fr;}
+        .review-grid{grid-template-columns:1fr;}
+        .review-header{flex-direction:column;align-items:flex-start;}
+        .ai-popup .box{max-width:100%;}
+    }
+    @media(max-width:380px){
+        .cat-grid{grid-template-columns:repeat(2,1fr);}
+        .hero h2{font-size:17px;}
+        .nav-item{font-size:9px;}
+        .nav-item .ic{font-size:17px;}
+    }
+</style>
+
+<style id="persiaShopUpgrade">
+/* ===== ارتقای اختصاصی پرشیا شاپ: دارک پریمیوم، گلس‌مورفیسم و مارکت واقعی ===== */
+:root{
+    --ps-bg:#050713;--ps-bg2:#0b1024;--ps-glass:rgba(18,24,48,.58);--ps-glass2:rgba(255,255,255,.075);
+    --ps-line:rgba(148,163,184,.22);--ps-cyan:#22d3ee;--ps-violet:#8b5cf6;--ps-pink:#ec4899;--ps-amber:#f59e0b;
+    --ps-green:#34d399;--ps-danger:#fb7185;--ps-text:#f8fafc;--ps-muted:#b9c3d7;
+    --primary:#8b5cf6;--primary-light:#c4b5fd;--primary-dark:#a78bfa;--secondary:#22d3ee;--gold:#fbbf24;
+    --bg:#050713;--card:rgba(15,23,42,.64);--card2:rgba(30,41,59,.58);--text:#f8fafc;--text2:#d8e0f0;--text3:#94a3b8;
+    --border:rgba(148,163,184,.22);--border2:rgba(255,255,255,.10);
+    --gradient:linear-gradient(135deg,#8b5cf6 0%,#22d3ee 52%,#ec4899 100%);
+    --gradient-gold:linear-gradient(135deg,#f59e0b,#fbbf24,#fde68a);
+    --shadow:0 18px 50px rgba(0,0,0,.36);--shadow-hover:0 24px 75px rgba(34,211,238,.18),0 0 55px rgba(139,92,246,.16);
+}
+body,body.dark{background:radial-gradient(circle at 15% 0%,rgba(139,92,246,.24),transparent 34%),radial-gradient(circle at 82% 12%,rgba(34,211,238,.16),transparent 36%),radial-gradient(circle at 55% 100%,rgba(236,72,153,.13),transparent 33%),var(--ps-bg)!important;color:var(--ps-text);}
+body::before{content:'پرشیا شاپ';position:fixed;inset:auto -10vw 12vh auto;font-size:clamp(58px,13vw,190px);font-weight:900;color:rgba(255,255,255,.018);transform:rotate(-12deg);pointer-events:none;z-index:0;white-space:nowrap;}
+.header,.navbar,.menu-side,.cmp-panel,.review-card,.settings-card,.shop-card,.deal-card,.cat-tile,.stat-card,.auth-modal .box,.ai-popup .box,.link-modal .box,.tour-box{background:var(--ps-glass)!important;border:1px solid var(--ps-line)!important;backdrop-filter:blur(20px) saturate(150%)!important;-webkit-backdrop-filter:blur(20px) saturate(150%)!important;box-shadow:var(--shadow)!important;}
+.header{background:rgba(5,7,19,.58)!important}.navbar{background:rgba(5,7,19,.72)!important;backdrop-filter:blur(22px)!important}.hero{background:linear-gradient(135deg,rgba(139,92,246,.94),rgba(14,165,233,.72),rgba(236,72,153,.75))!important;border:1px solid rgba(255,255,255,.18);box-shadow:0 22px 90px rgba(139,92,246,.28),inset 0 1px 0 rgba(255,255,255,.18)!important;}
+.logo .ic,.nav-fab{box-shadow:0 0 30px rgba(34,211,238,.35),0 0 55px rgba(139,92,246,.24)!important}.cart-mini-badge{position:absolute;top:1px;left:3px;min-width:16px;height:16px;padding:0 4px;background:linear-gradient(135deg,#fb7185,#f59e0b);color:#fff;border-radius:999px;font-size:9px;display:flex;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.32)}
+.shop-card::after,.deal-card::after,.cat-tile::after,.ps-product-card::after{content:'';position:absolute;inset:-1px;border-radius:inherit;background:radial-gradient(circle at var(--mx,50%) var(--my,30%),rgba(34,211,238,.28),transparent 26%),linear-gradient(135deg,rgba(139,92,246,.26),transparent,rgba(236,72,153,.22));opacity:0;transition:.35s;pointer-events:none}.shop-card:hover::after,.deal-card:hover::after,.cat-tile:hover::after,.ps-product-card:hover::after{opacity:1}.shop-card,.deal-card,.cat-tile,.ps-product-card{position:relative;overflow:hidden}.shop-card:hover,.deal-card:hover,.cat-tile:hover,.ps-product-card:hover{box-shadow:var(--shadow-hover)!important;border-color:rgba(34,211,238,.42)!important}
+.ps-market{margin:18px 0 26px;position:relative;z-index:1}.ps-market-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:8px 2px 14px}.ps-market-title{font-size:20px;font-weight:900;display:flex;align-items:center;gap:9px}.ps-market-title span{background:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}.ps-market-sub{font-size:12px;color:var(--ps-muted);margin-top:4px}.ps-toolbar{display:grid;grid-template-columns:1.3fr auto auto;gap:10px;background:rgba(15,23,42,.54);border:1px solid var(--ps-line);border-radius:24px;padding:12px;backdrop-filter:blur(20px);box-shadow:var(--shadow)}.ps-search{position:relative}.ps-search input,.ps-select{width:100%;height:46px;border-radius:18px;border:1px solid var(--ps-line);background:rgba(2,6,23,.52);color:var(--ps-text);font-family:inherit;padding:0 44px 0 14px;outline:none;transition:.25s}.ps-search .mag{position:absolute;right:15px;top:50%;transform:translateY(-50%);opacity:.75}.ps-search input:focus,.ps-select:focus{border-color:rgba(34,211,238,.7);box-shadow:0 0 0 4px rgba(34,211,238,.09)}.ps-cart-button{height:46px;border:0;border-radius:18px;background:var(--gradient);color:#fff;font-family:inherit;font-weight:900;padding:0 18px;cursor:pointer;box-shadow:0 12px 32px rgba(139,92,246,.27);transition:.28s;white-space:nowrap}.ps-cart-button:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 0 30px rgba(34,211,238,.32)}.ps-cat-pills{display:flex;gap:8px;overflow:auto;padding:12px 2px 8px;scrollbar-width:none}.ps-cat-pills::-webkit-scrollbar{display:none}.ps-pill{flex:0 0 auto;border:1px solid var(--ps-line);background:rgba(255,255,255,.06);color:var(--ps-muted);padding:9px 15px;border-radius:999px;cursor:pointer;font-family:inherit;font-size:12px;font-weight:800;transition:.25s}.ps-pill:hover,.ps-pill.active{background:linear-gradient(135deg,rgba(139,92,246,.42),rgba(34,211,238,.26));color:#fff;border-color:rgba(34,211,238,.45);box-shadow:0 0 22px rgba(34,211,238,.14)}.ps-energy{height:3px;border-radius:99px;background:rgba(255,255,255,.09);overflow:hidden;margin:4px 2px 14px}.ps-energy i{display:block;width:38%;height:100%;background:linear-gradient(90deg,transparent,#22d3ee,#f472b6,transparent);animation:psEnergy 1.4s linear infinite}@keyframes psEnergy{from{transform:translateX(270%)}to{transform:translateX(-270%)}}
+.ps-product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:16px}.ps-product-card{background:rgba(15,23,42,.62);border:1px solid var(--ps-line);border-radius:26px;box-shadow:var(--shadow);backdrop-filter:blur(20px);transition:.32s cubic-bezier(.34,1.56,.64,1);min-height:392px}.ps-product-card:hover{transform:translateY(-8px)}.ps-img{height:168px;margin:10px;border-radius:22px;overflow:hidden;background:rgba(255,255,255,.06);position:relative}.ps-img img{width:100%;height:100%;object-fit:cover;display:block;transition:.45s}.ps-product-card:hover .ps-img img{transform:scale(1.07)}.ps-badge{position:absolute;top:12px;right:12px;background:rgba(2,6,23,.58);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(12px);color:#fff;border-radius:999px;padding:5px 10px;font-size:10px;font-weight:900}.ps-card-body{padding:4px 16px 16px}.ps-prod-cat{font-size:10px;color:#67e8f9;font-weight:800}.ps-prod-name{font-size:15px;font-weight:900;margin:5px 0 6px;line-height:1.55}.ps-prod-desc{font-size:11.5px;color:var(--ps-muted);line-height:1.7;height:40px;overflow:hidden}.ps-price-row{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.ps-price{font-size:16px;font-weight:900;color:#fef3c7}.ps-old{font-size:11px;color:#94a3b8;text-decoration:line-through}.ps-rating{font-size:11px;color:#fbbf24;direction:ltr}.ps-actions{display:grid;grid-template-columns:1fr 42px;gap:8px;margin-top:13px}.ps-add,.ps-quick{height:42px;border-radius:16px;border:0;font-family:inherit;cursor:pointer;font-weight:900;transition:.25s}.ps-add{background:linear-gradient(135deg,#34d399,#22d3ee);color:#042f2e}.ps-quick{background:rgba(255,255,255,.08);color:#fff;border:1px solid var(--ps-line)}.ps-add:hover,.ps-quick:hover{transform:translateY(-2px);filter:brightness(1.08)}.ps-empty{grid-column:1/-1;text-align:center;padding:45px 12px;color:var(--ps-muted)}
+.ps-drawer-backdrop,.ps-modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.58);backdrop-filter:blur(12px);z-index:1100;opacity:0;pointer-events:none;transition:.3s}.ps-drawer-backdrop.open,.ps-modal-backdrop.open{opacity:1;pointer-events:all}.ps-cart-drawer{position:fixed;top:0;bottom:0;left:0;width:420px;max-width:92vw;background:rgba(15,23,42,.78);border-right:1px solid var(--ps-line);backdrop-filter:blur(24px);z-index:1101;transform:translateX(-105%);transition:.45s cubic-bezier(.34,1.56,.64,1);display:flex;flex-direction:column;box-shadow:25px 0 90px rgba(0,0,0,.45)}.ps-cart-drawer.open{transform:translateX(0)}.ps-drawer-head{padding:18px;border-bottom:1px solid var(--ps-line);display:flex;align-items:center;justify-content:space-between}.ps-drawer-head h3{font-size:18px}.ps-close{width:38px;height:38px;border-radius:14px;border:1px solid var(--ps-line);background:rgba(255,255,255,.07);color:#fff;cursor:pointer}.ps-cart-items{padding:14px;overflow:auto;flex:1}.ps-cart-item{display:grid;grid-template-columns:62px 1fr;gap:10px;background:rgba(255,255,255,.055);border:1px solid var(--ps-line);border-radius:20px;padding:9px;margin-bottom:10px}.ps-cart-thumb{width:62px;height:62px;border-radius:16px;overflow:hidden}.ps-cart-thumb img{width:100%;height:100%;object-fit:cover}.ps-ci-name{font-weight:900;font-size:13px}.ps-ci-price{color:#fef3c7;font-size:12px;margin-top:3px}.ps-qty{display:flex;align-items:center;gap:7px;margin-top:8px}.ps-qty button{width:27px;height:27px;border-radius:10px;border:1px solid var(--ps-line);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}.ps-remove{margin-right:auto;color:#fb7185!important}.ps-cart-foot{border-top:1px solid var(--ps-line);padding:15px 18px;background:rgba(2,6,23,.3)}.ps-total{display:flex;justify-content:space-between;font-weight:900;margin-bottom:12px}.ps-checkout{width:100%;height:48px;border:0;border-radius:17px;background:var(--gradient-gold);font-family:inherit;font-weight:900;color:#3b2500;cursor:pointer}.ps-clear-cart{width:100%;margin-top:8px;height:38px;border-radius:14px;border:1px solid rgba(251,113,133,.32);background:rgba(251,113,133,.08);color:#fecdd3;font-family:inherit;cursor:pointer}.ps-modal{position:fixed;inset:auto 50% 50% auto;transform:translate(50%,50%) scale(.92);width:620px;max-width:92vw;max-height:86vh;overflow:auto;background:rgba(15,23,42,.74);border:1px solid var(--ps-line);border-radius:30px;backdrop-filter:blur(24px);z-index:1102;opacity:0;pointer-events:none;transition:.32s;box-shadow:0 30px 100px rgba(0,0,0,.5)}.ps-modal.open{opacity:1;pointer-events:all;transform:translate(50%,50%) scale(1)}.ps-modal-content{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:18px}.ps-modal-img{border-radius:24px;overflow:hidden;min-height:250px}.ps-modal-img img{width:100%;height:100%;object-fit:cover}.ps-modal-info h3{font-size:21px;margin:12px 0 8px}.ps-specs{display:grid;gap:7px;margin:14px 0}.ps-specs span{background:rgba(255,255,255,.06);border:1px solid var(--ps-line);border-radius:14px;padding:8px 10px;font-size:12px;color:var(--ps-muted)}.ps-toast-stack{position:fixed;top:78px;left:16px;z-index:1300;display:grid;gap:10px}.ps-toast{min-width:260px;max-width:350px;background:rgba(15,23,42,.82);border:1px solid var(--ps-line);backdrop-filter:blur(20px);border-radius:18px;padding:13px 15px;color:#fff;box-shadow:0 18px 60px rgba(0,0,0,.32);animation:psToast .45s cubic-bezier(.34,1.56,.64,1)}.ps-toast.success{border-color:rgba(52,211,153,.42)}.ps-toast.error{border-color:rgba(251,113,133,.5)}@keyframes psToast{from{opacity:0;transform:translateX(-35px) scale(.95)}to{opacity:1;transform:translateX(0) scale(1)}}.ps-footer-protect{margin-top:18px;text-align:center;font-size:10.5px;color:var(--ps-muted);line-height:1.9;background:rgba(255,255,255,.035);border:1px solid var(--ps-line);border-radius:18px;padding:12px}.ps-footer-protect b{color:#67e8f9}
+@media(max-width:820px){.ps-toolbar{grid-template-columns:1fr}.ps-product-grid{grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px}.ps-product-card{min-height:370px}.ps-modal-content{grid-template-columns:1fr}.ps-modal-img{min-height:210px}.ps-toast-stack{left:10px;right:10px}.ps-toast{max-width:none;width:100%}}
+</style>
+
+
+<style id="realPersiaUpgrade">
+.real-note{margin:6px 2px 14px;padding:12px 14px;border-radius:18px;background:rgba(34,211,238,.07);border:1px solid rgba(34,211,238,.22);color:var(--ps-muted);font-size:12px;line-height:1.8}.real-note b{color:#67e8f9}.real-note span{display:block;color:#fef3c7;margin-top:4px}.real-shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}.real-shop-card{background:rgba(15,23,42,.62);border:1px solid var(--ps-line);border-radius:23px;padding:14px;position:relative;overflow:hidden;box-shadow:var(--shadow);backdrop-filter:blur(20px);transition:.28s}.real-shop-card:hover{transform:translateY(-5px);border-color:rgba(34,211,238,.48);box-shadow:var(--shadow-hover)}.real-shop-card::before{content:'پرشیا شاپ';position:absolute;left:10px;bottom:6px;font-size:10px;color:rgba(255,255,255,.08);font-weight:900}.real-shop-head{display:flex;align-items:center;gap:10px}.real-shop-icon{width:44px;height:44px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:22px}.real-shop-name{font-weight:900}.real-shop-tag{font-size:10px;color:#67e8f9;margin-top:2px}.real-shop-desc{font-size:11.5px;color:var(--ps-muted);line-height:1.7;height:39px;overflow:hidden;margin-top:10px}.real-shop-link{direction:ltr;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:10px;color:#94a3b8;margin-top:10px;background:rgba(255,255,255,.045);border:1px dashed var(--ps-line);border-radius:12px;padding:7px}.real-shop-actions{display:grid;grid-template-columns:1fr 40px 40px;gap:7px;margin-top:11px}.real-shop-actions button,.real-shop-actions a{border:0;border-radius:14px;min-height:38px;display:flex;align-items:center;justify-content:center;text-decoration:none;font-family:inherit;font-weight:900;cursor:pointer}.real-open{background:linear-gradient(135deg,#34d399,#22d3ee);color:#052e2b}.real-copy,.real-pick{background:rgba(255,255,255,.08);border:1px solid var(--ps-line)!important;color:#fff}.real-pick.on{background:linear-gradient(135deg,#8b5cf6,#ec4899);color:#fff}.cmp-card .frame-wrap{resize:vertical;overflow:auto;min-height:300px;max-height:78vh}.cmp-card.can-frame{order:-2;border-color:rgba(34,211,238,.42)!important}.cmp-card.can-frame .ch::after{content:'نمایش مستقیم محتمل‌تر';font-size:9px;color:#67e8f9;margin-right:auto}.cmp-priority-note{margin:0;padding:10px 12px;border-radius:15px;background:rgba(34,211,238,.08);border:1px solid rgba(34,211,238,.22);font-size:11.5px;color:var(--text2);line-height:1.8}.utility-modal{position:fixed;inset:0;background:rgba(0,0,0,.58);backdrop-filter:blur(14px);z-index:1400;display:none;align-items:center;justify-content:center;padding:18px}.utility-modal.open{display:flex}.utility-box{width:min(620px,94vw);max-height:84vh;overflow:auto;background:rgba(15,23,42,.82);border:1px solid var(--ps-line);border-radius:28px;padding:22px;box-shadow:0 28px 100px rgba(0,0,0,.5);backdrop-filter:blur(24px);animation:fade .25s ease}.utility-head{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid var(--ps-line);padding-bottom:12px;margin-bottom:14px}.utility-head h3{font-size:18px}.utility-close{width:38px;height:38px;border-radius:14px;border:1px solid var(--ps-line);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}.utility-content{font-size:13px;line-height:2;color:var(--text2)}.utility-content a{color:#67e8f9;font-weight:900}.faq-item{border:1px solid var(--ps-line);background:rgba(255,255,255,.05);border-radius:16px;margin-bottom:9px;overflow:hidden}.faq-q{padding:12px 14px;font-weight:900;cursor:pointer}.faq-a{display:none;padding:0 14px 13px;color:var(--ps-muted);font-size:12px;line-height:2}.faq-item.open .faq-a{display:block}.chat-wrap{display:grid;gap:12px}.chat-log{height:310px;overflow:auto;background:rgba(2,6,23,.35);border:1px solid var(--ps-line);border-radius:18px;padding:12px}.chat-msg{max-width:88%;margin:8px 0;padding:10px 12px;border-radius:16px;font-size:12.5px;line-height:1.9}.chat-msg.bot{background:rgba(34,211,238,.09);border:1px solid rgba(34,211,238,.22);margin-left:auto}.chat-msg.user{background:rgba(139,92,246,.18);border:1px solid rgba(139,92,246,.28);margin-right:auto}.chat-input-row{display:grid;grid-template-columns:1fr auto;gap:8px}.chat-input-row input{height:44px;border-radius:16px;border:1px solid var(--ps-line);background:rgba(2,6,23,.45);color:#fff;padding:0 14px;font-family:inherit}.chat-input-row button,.mini-action{border:0;border-radius:16px;background:var(--gradient);color:#fff;padding:0 16px;font-family:inherit;font-weight:900;cursor:pointer}.chat-suggestions{display:flex;gap:7px;flex-wrap:wrap}.chat-suggestions button{border:1px solid var(--ps-line);background:rgba(255,255,255,.06);color:var(--text2);border-radius:999px;padding:7px 11px;font-family:inherit;cursor:pointer;font-size:11px}.legal-pop{position:fixed;inset:0;background:rgba(0,0,0,.70);backdrop-filter:blur(16px);z-index:2000;display:none;align-items:center;justify-content:center;padding:18px}.legal-pop.open{display:flex}.legal-box{width:min(520px,94vw);background:rgba(15,23,42,.88);border:1px solid rgba(251,191,36,.35);border-radius:28px;padding:24px;box-shadow:0 30px 100px rgba(0,0,0,.55);text-align:center}.legal-box .big{font-size:48px}.legal-box h2{margin:8px 0;color:#fef3c7}.legal-box p{line-height:2;color:var(--text2);font-size:13px}.legal-box button{margin-top:14px;height:44px;border:0;border-radius:16px;background:var(--gradient-gold);font-family:inherit;font-weight:900;color:#3b2500;padding:0 24px;cursor:pointer}@media(max-width:720px){.real-shop-grid{grid-template-columns:1fr}.chat-input-row{grid-template-columns:1fr}.chat-input-row button{height:42px}}
+</style>
+
+</head>
+<body class="dark persia-upgraded">
+
+<!-- ===== اسپلش ===== -->
+<div class="splash" id="splash">
+    <div class="particles" id="particles"></div>
+    <div class="logo">🛍️</div>
+    <h1>پرشیا <span>شاپ</span></h1>
+    <div class="sub">✦ مرورگر و مقایسه‌گر خرید ایرانی ✦</div>
+    <div class="loader"><div class="bar"></div></div>
+    <div class="ver">✦ نسخه ۱۰ پرشیا ✦</div>
+</div>
+
+<!-- ===== هدر ===== -->
+<header class="header">
+    <div class="top">
+        <div class="logo" onclick="navigate('home')">
+            <div class="ic">🛍️</div>
+            <div>
+                <div class="tx"><span class="p">پرشیا</span><span class="s">شاپ</span></div>
+                <div class="sb">✦ مقایسه و خرید هوشمند ✦</div>
+            </div>
+        </div>
+        <div class="actions">
+            <button onclick="navigate('compare')" title="مقایسه قیمت"><span id="cmpIc">⚖️</span></button>
+            <button onclick="openLinkFromSearch()" title="دریافت لینک">🔗</button>
+            <button onclick="toggleDarkMode()" title="حالت تاریک"><span id="darkIcon">🌙</span></button>
+            <button onclick="openContactModal()" title="ارتباط با ما">📧</button>
+            <button onclick="toggleMenu()" title="منو">☰</button>
+        </div>
+    </div>
+</header>
+
+<!-- ===== صفحه: خانه ===== -->
+<section class="page active" id="page-home">
+    <div class="hero">
+        <div class="deco"></div>
+        <h2>🛍️ به <span class="g">پرشیا شاپ</span> خوش آمدید</h2>
+        <p>جستجوی همزمان در بهترین فروشگاه‌های ایران و مقایسه قیمت‌ها</p>
+        <div class="searchbox">
+            <input type="text" id="heroSearch" placeholder="نام کالا را بنویسید... مثلاً گوشی سامسونگ" onkeypress="if(event.key==='Enter')goCompare(this.value)" />
+            <button class="go" onclick="goCompare(document.getElementById('heroSearch').value)">⚖️ مقایسه قیمت</button>
+        </div>
+        <div class="chips" id="trendingChips"></div>
+    </div>
+    <!-- ===== جستجوی واقعی محصول در فروشگاه‌های ایرانی ===== -->
+    <section class="ps-market" aria-label="جستجوی واقعی پرشیا شاپ">
+        <div class="ps-market-head">
+            <div>
+                <div class="ps-market-title">🔎 جستجوی واقعی در <span>فروشگاه‌های ایرانی</span></div>
+                <div class="ps-market-sub">در این بخش محصول ساختگی نمایش داده نمی‌شود؛ فقط لینک جستجوی زنده در فروشگاه‌ها و موتورهای مقایسه معتبر ساخته می‌شود.</div>
+            </div>
+            <button class="ps-cart-button" onclick="RealMarket.openAll()">↗ باز کردن نتایج منتخب</button>
+        </div>
+        <div class="ps-toolbar">
+            <div class="ps-search"><span class="mag">🔎</span><input id="realProductSearch" type="search" placeholder="نام محصول واقعی را وارد کنید؛ مثال: آیفون ۱۵، کفش نایک، کرم ضدآفتاب" autocomplete="off" /></div>
+            <select id="realCategorySelect" class="ps-select" aria-label="دسته‌بندی جستجو"></select>
+            <button class="ps-cart-button" onclick="RealMarket.compareNow()">⚖️ مقایسه همین کالا</button>
+        </div>
+        <div class="ps-cat-pills" id="realQuickCategories"></div>
+        <div class="ps-energy" aria-hidden="true"><i></i></div>
+        <div class="real-note">
+            <b>شفافیت پرشیا شاپ:</b> قیمت‌ها و موجودی‌ها توسط سایت مقصد تعیین می‌شوند. برای جلوگیری از گمراهی، این برنامه قیمت ساختگی نشان نمی‌دهد و شما را به صفحه واقعی همان فروشگاه هدایت می‌کند.
+            <span id="realLastUpdate"></span>
+        </div>
+        <div class="real-shop-grid" id="realShopResults"></div>
+    </section>
+
+    <div class="sec-title"><span class="bar"></span> دسته‌بندی فروشگاه‌ها</div>
+    <div class="cat-grid" id="homeCats"></div>
+
+    <div class="sec-title"><span class="bar"></span> محبوب‌ترین فروشگاه‌ها <span class="more" onclick="navigate('shops')">همه فروشگاه‌ها ›</span></div>
+    <div class="hscroll" id="popularShops"></div>
+
+    <div class="sec-title"><span class="bar"></span> نکته شفافیت خرید</div>
+    <div class="cmp-panel"><div class="hint" style="margin:0;line-height:1.9">✅ پرشیا شاپ قیمت یا تخفیف ساختگی نمایش نمی‌دهد. برای دیدن قیمت و موجودی لحظه‌ای، نام کالا را جستجو کنید و وارد صفحه واقعی فروشگاه مقصد شوید.</div></div>
+
+    <div class="sec-title"><span class="bar"></span> آمار پرشیا شاپ</div>
+    <div class="stat-grid" id="statGrid"></div>
+
+    <!-- ===== بخش نظرات ===== -->
+    <div class="sec-title"><span class="bar"></span> نظرات کاربران 🌟</div>
+    <div class="review-header">
+        <div class="score">
+            <span class="num" id="avgScore">۴٫۹</span>
+            <span class="stars" id="avgStars">★★★★★</span>
+            <span class="label">از ۵</span>
+        </div>
+        <div class="count" id="reviewCount">۰ نظر</div>
+    </div>
+    <div class="review-grid" id="reviewsGrid"></div>
+
+    <div class="review-form" id="reviewForm">
+        <div class="title">✍️ ثبت نظر جدید</div>
+        <div class="star-rating" id="starRating">
+            <span class="star" data-value="1">☆</span>
+            <span class="star" data-value="2">☆</span>
+            <span class="star" data-value="3">☆</span>
+            <span class="star" data-value="4">☆</span>
+            <span class="star" data-value="5">☆</span>
+        </div>
+        <div id="replyIndicator" style="display:none;" class="reply-to">
+            <span>در حال پاسخ به: <span id="replyToName"></span></span>
+            <span class="cancel" onclick="cancelReply()">لغو پاسخ</span>
+        </div>
+        <textarea id="reviewText" placeholder="نظر خود را بنویسید..."></textarea>
+        <button class="submit-btn" onclick="submitReview()">📝 ثبت نظر</button>
+    </div>
+
+    <div class="footer-note">
+        ساخته و طراحی شده توسط <b>امیرمحمد گلستان</b> <span class="insp">✦ پرشیا شاپ © ۱۴۰۴ ✦</span><br>
+        پرشیا شاپ — مرورگر و مقایسه‌گر خرید ایرانی
+    </div>
+</section>
+
+<!-- ===== صفحه: فروشگاه‌ها ===== -->
+<section class="page" id="page-shops">
+    <div class="sec-title"><span class="bar"></span> همه فروشگاه‌ها</div>
+    <div class="cmp-panel">
+        <div class="row">
+            <input type="text" id="shopFilter" placeholder="🔍 جستجوی فروشگاه..." oninput="renderShopGrid()" />
+        </div>
+    </div>
+    <div class="filter-bar" id="catFilters"></div>
+    <div style="height:10px;"></div>
+    <div class="shop-grid" id="shopGrid"></div>
+</section>
+
+<!-- ===== صفحه: مقایسه ===== -->
+<section class="page" id="page-compare">
+    <div class="hero" style="padding:22px 18px;">
+        <div class="deco"></div>
+        <h2>⚖️ <span class="g">مقایسه‌گر</span> قیمت هوشمند</h2>
+        <p>یک کالا را در چند فروشگاه همزمان ببینید و ارزان‌ترین را پیدا کنید</p>
+    </div>
+
+    <div class="cmp-panel">
+        <div class="row">
+            <input type="text" id="cmpInput" placeholder="نام کالا... مثلاً هدفون بلوتوث سونی" onkeypress="if(event.key==='Enter')runCompare()" />
+            <button class="btn" onclick="runCompare()">⚡ شروع مقایسه</button>
+        </div>
+        <div class="hint"><span>💡</span> قیمت‌ها مستقیماً از سایت هر فروشگاه نمایش داده می‌شوند — ارزان‌ترین را انتخاب کنید.</div>
+        <div class="pick-label">
+            <span>📍 انتخاب فروشگاه‌های مقایسه</span>
+            <div class="sel-acts"><span onclick="selectAllShops(true)">انتخاب همه</span> | <span onclick="selectAllShops(false)">پاک کردن</span></div>
+        </div>
+        <div class="pick-grid" id="pickGrid"></div>
+    </div>
+
+    <div id="cmpResults"></div>
+</section>
+
+<!-- ===== صفحه: علاقه‌مندی ===== -->
+<section class="page" id="page-fav">
+    <div class="sec-title"><span class="bar"></span> علاقه‌مندی‌های من ❤️</div>
+    <div class="cmp-panel" id="favPanel">
+        <div class="hint" style="margin:0;"><span>⭐</span> فروشگاه‌ها و کالاهای مورد علاقه خود را اینجا ذخیره کنید.</div>
+    </div>
+    <div class="shop-grid" id="favGrid"></div>
+</section>
+
+<!-- ===== صفحه: تنظیمات ===== -->
+<section class="page" id="page-settings">
+    <div class="sec-title"><span class="bar"></span> تنظیمات و شخصی‌سازی</div>
+    <div class="settings-grid">
+        <div class="settings-card">
+            <div class="label">🎨 تم برنامه</div>
+            <div class="options" id="themeOptions">
+                <span class="opt active" data-theme="default" onclick="setTheme('default')">پیش‌فرض</span>
+                <span class="opt" data-theme="cocoa" onclick="setTheme('cocoa')"><span class="theme-sample" style="background:#8D6E63;"></span>کاکائویی</span>
+                <span class="opt" data-theme="green" onclick="setTheme('green')"><span class="theme-sample" style="background:#2E7D32;"></span>سبز</span>
+                <span class="opt" data-theme="blue" onclick="setTheme('blue')"><span class="theme-sample" style="background:#1565C0;"></span>آبی</span>
+                <span class="opt" data-theme="gold" onclick="setTheme('gold')"><span class="theme-sample" style="background:#F9A825;"></span>طلایی</span>
+                <span class="opt" data-theme="rose" onclick="setTheme('rose')"><span class="theme-sample" style="background:#C62828;"></span>رز</span>
+            </div>
+        </div>
+        <div class="settings-card">
+            <div class="label">🔤 فونت</div>
+            <div class="options" id="fontOptions">
+                <span class="opt active" data-font="vazir" onclick="setFont('vazir')">وزیرمتن</span>
+                <span class="opt" data-font="tahoma" onclick="setFont('tahoma')">Tahoma</span>
+                <span class="opt" data-font="iran" onclick="setFont('iran')">ایران‌سنس</span>
+                <span class="opt" data-font="yekan" onclick="setFont('yekan')">یکان</span>
+            </div>
+        </div>
+        <div class="settings-card" style="grid-column:1/-1;">
+            <div class="label">🌙 حالت تاریک</div>
+            <div class="options">
+                <span class="opt" onclick="toggleDarkMode()" id="darkToggle">فعال/غیرفعال</span>
+            </div>
+        </div>
+        <div class="settings-card" style="grid-column:1/-1;">
+            <div class="label">📢 راهنمای تعاملی</div>
+            <div class="options">
+                <span class="opt" onclick="startTour()">▶️ شروع راهنما</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ===== بیننده سایت ===== -->
+<div class="viewer" id="viewer">
+    <div class="vbar">
+        <button class="back" onclick="closeViewer()">✕</button>
+        <div class="v-em" id="vEm">🛍️</div>
+        <div>
+            <div class="v-nm" id="vNm">فروشگاه</div>
+        </div>
+        <div class="v-url" id="vUrl"></div>
+        <div class="v-acts">
+            <button onclick="copyCurrentViewerLink()" title="کپی لینک">🔗</button>
+            <button onclick="refreshViewer()" title="بارگذاری مجدد">🔄</button>
+            <button onclick="openViewerExternal()" title="باز کردن در سایت">↗</button>
+        </div>
+    </div>
+    <div class="vframe">
+        <div class="ovly" id="vOvly">
+            <div class="sp"></div>
+            <div class="t" id="vLoadT">در حال بارگذاری...</div>
+            <div class="s" id="vLoadS"></div>
+        </div>
+        <iframe id="vFrame" allow="fullscreen"></iframe>
+    </div>
+</div>
+
+<!-- ===== مودال لینک ===== -->
+<div class="link-modal" id="linkModal">
+    <div class="box">
+        <button class="close-x" onclick="closeLinkModal()">✕</button>
+        <div class="ic">🔗</div>
+        <h3>دریافت لینک دقیق</h3>
+        <p>این دقیقاً همان آدرسی است که به صفحه و کالا می‌رسد</p>
+        <div class="addr" id="linkAddr"></div>
+        <div class="acts">
+            <button class="cp" onclick="copyModalLink()">📋 کپی آدرس</button>
+            <button class="op" onclick="openModalLink()">↗ باز کردن</button>
+        </div>
+    </div>
+</div>
+
+<!-- ===== نوار ناوبری پایین ===== -->
+<nav class="navbar">
+    <div class="nav-item active" data-nav="home" onclick="navigate('home')" ontouchend="navigate('home')"><span class="ic">🏠</span> خانه</div>
+    <div class="nav-item" data-nav="shops" onclick="navigate('shops')" ontouchend="navigate('shops')"><span class="ic">🏬</span> فروشگاه‌ها</div>
+    <button class="nav-fab" onclick="navigate('compare')" ontouchend="navigate('compare')" title="مقایسه قیمت">⚖️</button>
+    <div class="nav-item" data-nav="fav" onclick="navigate('fav')" ontouchend="navigate('fav')"><span class="ic">❤️</span> علاقه‌مندی <span class="badge" id="favBadge" style="display:none;">0</span></div>
+    <div class="nav-item" data-nav="settings" onclick="navigate('settings')" ontouchend="navigate('settings')"><span class="ic">⚙️</span> تنظیمات</div>
+</nav>
+
+<!-- ===== منوی کشویی ===== -->
+<div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+<div class="menu-side" id="menuSide">
+    <button class="close-menu" onclick="toggleMenu()">✕</button>
+    <div class="profile">
+        <div class="avatar" id="pAvatar">👤</div>
+        <div class="name" id="pName">کاربر مهمان</div>
+        <div class="email" id="pEmail">وارد شوید</div>
+        <div class="status"><span class="dt"></span> آنلاین</div>
+        <button class="login-btn" id="authBtn" onclick="openAuthModal()">ورود / ثبت‌نام</button>
+        <button class="logout-btn" id="logoutBtn" style="display:none;" onclick="logout()">خروج از حساب</button>
+    </div>
+
+    <div class="creator">
+        <div class="lbl">✦ ساخته و طراحی شده توسط ✦</div>
+        <div class="nm">امیرمحمد <span>گلستان</span> <span class="heart">❤️</span></div>
+        <div class="insp">پرشیا شاپ — مرورگر و مقایسه‌گر خرید ایرانی</div>
+    </div>
+
+    <div class="menu-items">
+        <div class="st">🏪 فروشگاه‌های محبوب</div>
+        <div id="menuShopLinks"></div>
+
+        <div class="st">⚡ امکانات</div>
+        <div class="item" onclick="navigate('compare');toggleMenu();"><span class="ic">⚖️</span><span class="tx">مقایسه قیمت کالا</span><span class="tg">اصلی</span><span class="arr">›</span></div>
+        <div class="item" onclick="navigate('shops');toggleMenu();"><span class="ic">🏬</span><span class="tx">همه فروشگاه‌ها</span><span class="arr">›</span></div>
+        <div class="item" onclick="navigate('fav');toggleMenu();"><span class="ic">❤️</span><span class="tx">علاقه‌مندی‌های من</span><span class="arr">›</span></div>
+        <div class="item" onclick="navigate('settings');toggleMenu();"><span class="ic">⚙️</span><span class="tx">تنظیمات و شخصی‌سازی</span><span class="tg">جدید</span><span class="arr">›</span></div>
+        <div class="item" onclick="openAIPopup();toggleMenu();"><span class="ic">🤖</span><span class="tx">چت‌بات راهنمای خرید</span><span class="tg">ارتقا</span><span class="arr">›</span></div>
+        <div class="item" onclick="openFAQModal();toggleMenu();"><span class="ic">❓</span><span class="tx">سوالات متداول</span><span class="tg">جدید</span><span class="arr">›</span></div>
+        <div class="item" onclick="openChangesModal();toggleMenu();"><span class="ic">📝</span><span class="tx">تغییرات نسخه</span><span class="arr">›</span></div>
+        <div class="item" onclick="openGoogleSearch();toggleMenu();"><span class="ic">🌐</span><span class="tx">جستجو در گوگل</span><span class="arr">›</span></div>
+        <div class="item" onclick="openImageSearch();toggleMenu();"><span class="ic">📸</span><span class="tx">جستجوی تصویری</span><span class="arr">›</span></div>
+
+        <div class="st">⚙️ تنظیمات</div>
+        <div class="item" onclick="toggleDarkMode();"><span class="ic">🌙</span><span class="tx">حالت تاریک / روشن</span><span class="arr">›</span></div>
+        <div class="item" onclick="toggleNotifications();"><span class="ic">🔔</span><span class="tx">اعلان‌ها</span><span class="arr" id="notifStatus">فعال</span></div>
+        <div class="item" onclick="toggleFullscreen();toggleMenu();"><span class="ic">⛶</span><span class="tx">حالت تمام صفحه</span><span class="arr">›</span></div>
+        <div class="item" onclick="refreshAll();toggleMenu();"><span class="ic">🔄</span><span class="tx">بروزرسانی همه</span><span class="arr">›</span></div>
+        <div class="item" onclick="clearData();toggleMenu();"><span class="ic">🗑️</span><span class="tx">پاک کردن داده‌ها</span><span class="arr">›</span></div>
+
+        <div class="st">📊 آمار</div>
+        <div class="item" style="cursor:default;"><span class="ic">🏬</span><span class="tx">۴۴ فروشگاه متصل</span><span class="arr" style="color:var(--green)">✓</span></div>
+        <div class="item" style="cursor:default;"><span class="ic">🏷️</span><span class="tx">۱۴ دسته‌بندی</span><span class="arr" style="color:var(--green)">✓</span></div>
+        <div class="item" style="cursor:default;"><span class="ic">⭐</span><span class="tx">امتیاز ۴٫۹ از ۵</span><span class="arr" style="color:var(--accent)">★</span></div>
+
+        <div class="st">ℹ️ درباره</div>
+        <div class="item" onclick="showAbout();toggleMenu();"><span class="ic">ℹ️</span><span class="tx">درباره پرشیا شاپ</span><span class="arr">›</span></div>
+        <div class="item" onclick="openContactModal();toggleMenu();"><span class="ic">📧</span><span class="tx">ارتباط با ما</span><span class="arr">›</span></div>
+    </div>
+</div>
+
+<!-- ===== پاپ‌آپ هوش مصنوعی ===== -->
+<div class="ai-popup" id="aiPopup">
+    <div class="box">
+        <div class="hd">
+            <h2>🤖 دستیار هوشمند پرشیا</h2>
+            <button class="close" onclick="closeAIPopup()">✕</button>
+        </div>
+        <div id="aiQuestionsList"></div>
+        <div class="answer-box" id="aiAnswerBox">
+            <div class="label">📝 پاسخ هوش مصنوعی</div>
+            <div class="response" id="aiResponsePopup">یک سوال را انتخاب کنید...</div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== راهنمای تعاملی ===== -->
+<div class="tour-overlay" id="tourOverlay">
+    <div class="tour-box" id="tourBox">
+        <div class="step-indicator" id="tourDots"></div>
+        <div class="icon" id="tourIcon">🚀</div>
+        <h3 id="tourTitle">به پرشیا شاپ خوش آمدید!</h3>
+        <p id="tourDesc">با این راهنما با امکانات برنامه آشنا شوید.</p>
+        <div class="actions">
+            <button class="skip" onclick="endTour()">رد کردن</button>
+            <button class="prev" onclick="prevTour()" id="tourPrev" style="display:none;">‹ قبلی</button>
+            <button class="next" onclick="nextTour()" id="tourNext">بعدی ›</button>
+        </div>
+    </div>
+</div>
+
+<!-- ===== مودال احراز هویت ===== -->
+<div class="auth-modal" id="authModal">
+    <div class="box">
+        <div class="hd">
+            <h2 id="authTitle">ورود</h2>
+            <button class="close" onclick="closeAuthModal()">✕</button>
+        </div>
+        <form id="authForm" onsubmit="handleAuth(event)">
+            <div class="fg"><label>نام کاربری</label><input type="text" id="authUsername" placeholder="نام خود را وارد کنید" required /></div>
+            <div class="fg"><label>شماره موبایل</label><input type="tel" id="authPhone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" required /></div>
+            <button type="submit" class="submit" id="authSubmitBtn">ورود</button>
+        </form>
+        <div class="sw"><span id="switchAuthText" onclick="switchAuthMode()">ثبت‌نام</span></div>
+    </div>
+</div>
+
+
+<!-- ===== مودال‌های کاربردی پرشیا شاپ ===== -->
+<div class="legal-pop" id="legalPopup"><div class="legal-box"><div class="big">⚖️</div><h2>اطلاعیه مالکیت پرشیا شاپ</h2><p>این برنامه متعلق به امیرمحمد گلستان است و هرگونه بهره برداری و کپی، پیگرد قانونی دارد.</p><button onclick="acceptLegalNotice()">متوجه شدم</button></div></div>
+<div class="utility-modal" id="contactModal"><div class="utility-box"><div class="utility-head"><h3>📧 ارتباط با ما</h3><button class="utility-close" onclick="closeUtilityModal('contactModal')">✕</button></div><div class="utility-content">برای پیشنهاد فروشگاه جدید، گزارش خطا، همکاری یا بازخورد، می‌توانید مستقیماً از طریق جیمیل با امیرمحمد گلستان ارتباط بگیرید:<br><a href="/cdn-cgi/l/email-protection#2d4c40445f404540494a415e594c436d4a404c4441034e4240125e584f47484e5910f585f58af59ff583f4a5f59cf5820df493f59cf599f6a1f58a0df599f58af493"><span class="__cf_email__" data-cfemail="1e7f73776c7376737a79726d6a7f705e79737f7772307d7173">[email&#160;protected]</span></a><br><br><button class="mini-action" onclick="location.href='mailto:amirmhmdglstan@gmail.com?subject=بازخورد پرشیا شاپ'">ارسال ایمیل</button></div></div></div>
+<div class="utility-modal" id="faqModal"><div class="utility-box"><div class="utility-head"><h3>❓ سوالات متداول</h3><button class="utility-close" onclick="closeUtilityModal('faqModal')">✕</button></div><div class="utility-content" id="faqList"></div></div></div>
+<div class="utility-modal" id="changesModal"><div class="utility-box"><div class="utility-head"><h3>📝 تغییرات نسخه کاربردی</h3><button class="utility-close" onclick="closeUtilityModal('changesModal')">✕</button></div><div class="utility-content"><ul><li>حذف کامل محصولات ساختگی و قیمت‌های غیرواقعی.</li><li>اضافه شدن جستجوی واقعی در ۴۴ سایت و فروشگاه ایرانی.</li><li>بهبود مقایسه با اولویت سایت‌هایی که احتمال نمایش مستقیم دارند.</li><li>قابلیت تغییر ارتفاع کارت‌های مقایسه برای مشاهده راحت‌تر.</li><li>اضافه شدن چت‌بات راهنمای خرید و هدایت به ارتباط با ما در سوالات نامشخص.</li><li>افزودن سوالات متداول، ارتباط با ما، اطلاعیه مالکیت و متن تغییرات.</li><li>تمرکز روی لینک واقعی، موجودی واقعی در سایت مقصد، و پرهیز از داده ساختگی.</li></ul></div></div></div>
+
+<!-- ===== اعلان ===== -->
+<div class="notif" id="notif">
+    <div class="ic">🛒</div>
+    <div class="ct">
+        <div class="t" id="notifT">وقت خرید!</div>
+        <div class="m" id="notifM">برای خرید از فروشگاه‌های معتبر کلیک کنید</div>
+        <span class="tm" id="notifTm">اکنون</span>
+    </div>
+    <button class="x" onclick="closeNotif()">✕</button>
+</div>
+
+<!-- ===== اسنک ===== -->
+<div class="snackbar" id="snackbar"></div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ============================================================
+   فروشگاه‌ها — فقط فروشگاه‌هایی که واقعاً کار می‌کنند
+   ============================================================ */
+const SHOPS = [
+    {id:'torob',name:'ترب',en:'Torob',url:'https://torob.com',search:'https://torob.com/search/?query=',icon:'🔎',cat:'compare',color:'#ff5722',rating:4.8,tag:'مقایسه قیمت',desc:'موتور جستجو و مقایسه قیمت بین فروشگاه‌های متعدد',pop:true,canFrame:true,priority:1},
+    {id:'emalls',name:'ایمالز',en:'Emalls',url:'https://emalls.ir',search:'https://emalls.ir/Search.aspx?keyword=',icon:'📊',cat:'compare',color:'#0ea5e9',rating:4.6,tag:'مقایسه قیمت',desc:'جستجو و مقایسه قیمت کالا در فروشگاه‌های آنلاین',pop:true,canFrame:true,priority:2},
+    {id:'digikala',name:'دیجی‌کالا',en:'Digikala',url:'https://www.digikala.com',search:'https://www.digikala.com/search/?q=',icon:'🛒',cat:'general',color:'#ef4056',rating:4.8,tag:'مارکت‌پلیس',desc:'فروشگاه و بازارگاه بزرگ اینترنتی ایران',pop:true,canFrame:false,priority:3},
+    {id:'basalam',name:'باسلام',en:'Basalam',url:'https://basalam.com',search:'https://basalam.com/search?q=',icon:'🌿',cat:'marketplace',color:'#16a34a',rating:4.6,tag:'بازارگاه',desc:'بازار اجتماعی محصولات محلی، خانگی و فروشندگان ایرانی',pop:true,canFrame:false,priority:4},
+    {id:'technolife',name:'تکنولایف',en:'Technolife',url:'https://technolife.ir',search:'https://technolife.ir/list/search?q=',icon:'📱',cat:'tech',color:'#1565c0',rating:4.5,tag:'دیجیتال',desc:'فروشگاه تخصصی موبایل، لپ‌تاپ و کالای دیجیتال',pop:true,canFrame:false,priority:5},
+    {id:'timcheh',name:'تیمچه',en:'Timcheh',url:'https://www.timcheh.com',search:'https://www.timcheh.com/search?query=',icon:'🏬',cat:'general',color:'#7c3aed',rating:4.3,tag:'عمومی',desc:'فروشگاه اینترنتی عمومی با دسته‌بندی‌های متنوع',pop:true,canFrame:false,priority:6},
+    {id:'mobile140',name:'موبایل ۱۴۰',en:'Mobile140',url:'https://www.mobile140.com',search:'https://www.mobile140.com/fa/search?q=',icon:'📲',cat:'tech',color:'#0f766e',rating:4.3,tag:'موبایل',desc:'فروش موبایل، تبلت و لوازم جانبی',canFrame:false,priority:7},
+    {id:'kalatik',name:'کالاتیک',en:'Kalatik',url:'https://kalatik.com',search:'https://kalatik.com/search?search=',icon:'📱',cat:'tech',color:'#2563eb',rating:4.2,tag:'دیجیتال',desc:'فروشگاه تخصصی موبایل و تجهیزات دیجیتال',canFrame:false,priority:8},
+    {id:'shahrfafa',name:'شهر فافا',en:'Shahr Fafa',url:'https://shahrfaafa.com',search:'https://shahrfaafa.com/search?search=',icon:'💻',cat:'tech',color:'#0891b2',rating:4.2,tag:'کامپیوتر',desc:'فروشگاه قطعات کامپیوتر و کالای دیجیتال',canFrame:false,priority:9},
+    {id:'meghdadit',name:'مقداد آی‌تی',en:'Meghdad IT',url:'https://meghdadit.com',search:'https://meghdadit.com/search?search=',icon:'🖥️',cat:'tech',color:'#334155',rating:4.2,tag:'قطعات',desc:'فروشگاه تجهیزات کامپیوتری و دیجیتال',canFrame:false,priority:10},
+    {id:'lioncomputer',name:'لیون کامپیوتر',en:'Lion Computer',url:'https://lioncomputer.com',search:'https://lioncomputer.com/search?searchword=',icon:'💻',cat:'tech',color:'#37474f',rating:4.3,tag:'کامپیوتر',desc:'قطعات، سیستم و تجهیزات کامپیوتر',canFrame:false,priority:11},
+    {id:'alldigitall',name:'آل‌دیجیتال',en:'AllDigitall',url:'https://alldigitall.ir',search:'https://alldigitall.ir/search?search=',icon:'🔌',cat:'tech',color:'#0284c7',rating:4.1,tag:'دیجیتال',desc:'موبایل، لپ‌تاپ، گجت و لوازم جانبی',canFrame:false,priority:12},
+    {id:'19kala',name:'۱۹کالا',en:'19Kala',url:'https://www.19kala.com',search:'https://www.19kala.com/catalogsearch/result/?q=',icon:'📱',cat:'tech',color:'#dc2626',rating:4.1,tag:'موبایل',desc:'فروش و بررسی تخصصی موبایل و لوازم دیجیتال',canFrame:false,priority:13},
+    {id:'computerbazar',name:'کامپیوتر بازار',en:'Computer Bazar',url:'https://computerbazar.com',search:'https://computerbazar.com/search?q=',icon:'💻',cat:'tech',color:'#00695c',rating:4.0,tag:'کامپیوتر',desc:'قطعات و تجهیزات کامپیوتر',canFrame:false,priority:14},
+    {id:'digistyle',name:'دیجی‌استایل',en:'Digistyle',url:'https://www.digistyle.com',search:'https://www.digistyle.com/search?q=',icon:'👕',cat:'fashion',color:'#262626',rating:4.3,tag:'مد و لباس',desc:'فروشگاه مد، پوشاک، کیف و کفش',pop:true,canFrame:false,priority:15},
+    {id:'modiseh',name:'مدیسه',en:'Modiseh',url:'https://modiseh.com',search:'https://modiseh.com/search?q=',icon:'👗',cat:'fashion',color:'#d81b60',rating:4.4,tag:'پوشاک',desc:'پوشاک، مد، سبک زندگی و برخی کالاهای خانه',pop:true,canFrame:false,priority:16},
+    {id:'banimode',name:'بانی‌مد',en:'Banimode',url:'https://banimode.com',search:'https://banimode.com/search?q=',icon:'🧥',cat:'fashion',color:'#1a237e',rating:4.2,tag:'فشن',desc:'فروشگاه پوشاک، کفش، کیف و اکسسوری',canFrame:false,priority:17},
+    {id:'shixon',name:'شیکسون',en:'Shixon',url:'https://shixon.com',search:'https://shixon.com/search?q=',icon:'🛍️',cat:'fashion',color:'#be185d',rating:4.0,tag:'پوشاک',desc:'فروشگاه اینترنتی پوشاک و اکسسوری',canFrame:false,priority:18},
+    {id:'sahelshop',name:'پوشاک ساحل',en:'Sahel Shop',url:'https://sahelshop.com',search:'https://sahelshop.com/search?q=',icon:'👗',cat:'fashion',color:'#ff6f00',rating:4.1,tag:'پوشاک',desc:'فروشگاه پوشاک',canFrame:false,priority:19},
+    {id:'khanoumi',name:'خانومی',en:'Khanoumi',url:'https://khanoumi.com',search:'https://khanoumi.com/search?q=',icon:'💄',cat:'beauty',color:'#ec407a',rating:4.5,tag:'زیبایی',desc:'محصولات آرایشی، بهداشتی و مراقبت پوست',pop:true,canFrame:false,priority:20},
+    {id:'mootanroo',name:'مو تن رو',en:'Mootanroo',url:'https://mootanroo.com',search:'https://mootanroo.com/search?controller=search&s=',icon:'🧴',cat:'beauty',color:'#f472b6',rating:4.3,tag:'آرایشی',desc:'لوازم آرایشی، بهداشتی و مراقبت مو و پوست',canFrame:false,priority:21},
+    {id:'rojashop',name:'روژا شاپ',en:'Rojashop',url:'https://rojashop.com',search:'https://rojashop.com/search?q=',icon:'💅',cat:'beauty',color:'#db2777',rating:4.2,tag:'زیبایی',desc:'فروشگاه تخصصی عطر، آرایشی و بهداشتی',canFrame:false,priority:22},
+    {id:'atrafsan',name:'عطر افشان',en:'Atrafshan',url:'https://www.atrafshan.ir',search:'https://www.atrafshan.ir/search?keyword=',icon:'🌸',cat:'beauty',color:'#9333ea',rating:4.2,tag:'عطر',desc:'مرجع معرفی و خرید عطر و ادکلن',canFrame:false,priority:23},
+    {id:'snappmarket',name:'اسنپ‌مارکت',en:'Snapp Market',url:'https://snappmarket.com',search:'https://snappmarket.com/search?q=',icon:'🛍️',cat:'grocery',color:'#03b3a4',rating:4.5,tag:'سوپرمارکت',desc:'خرید سوپرمارکتی آنلاین',pop:true,canFrame:false,priority:24},
+    {id:'okala',name:'اُکالا',en:'Okala',url:'https://okala.com',search:'https://okala.com/search?q=',icon:'🥬',cat:'grocery',color:'#43a047',rating:4.1,tag:'سوپرمارکت',desc:'خرید آنلاین سوپرمارکت و مواد غذایی',canFrame:false,priority:25},
+    {id:'digikalajet',name:'دیجی‌کالا جت',en:'Digikala Jet',url:'https://jet.digikala.com',search:'https://jet.digikala.com/search?q=',icon:'⚡',cat:'grocery',color:'#ef4444',rating:4.1,tag:'ارسال سریع',desc:'خرید سریع سوپرمارکتی و کالاهای روزمره در شهرهای پشتیبانی‌شده',canFrame:false,priority:26},
+    {id:'okcs',name:'افق کوروش',en:'Ofogh Kourosh',url:'https://www.okcs.com',search:'https://www.okcs.com/search?q=',icon:'🛒',cat:'grocery',color:'#ea580c',rating:4.0,tag:'سوپرمارکت',desc:'فروشگاه زنجیره‌ای و خرید اینترنتی کالاهای روزمره',canFrame:false,priority:27},
+    {id:'zanbil',name:'زنبیل',en:'Zanbil',url:'https://zanbil.ir',search:'https://zanbil.ir/search?q=',icon:'🧺',cat:'home',color:'#00838f',rating:4.0,tag:'خانگی',desc:'لوازم خانگی، دیجیتال و کالاهای متنوع',canFrame:false,priority:28},
+    {id:'esam',name:'ایسام',en:'Esam',url:'https://www.esam.ir',search:'https://www.esam.ir/search?q=',icon:'📦',cat:'marketplace',color:'#7b1fa2',rating:4.2,tag:'مزایده',desc:'بازار خرید و فروش و مزایده آنلاین کالا',canFrame:false,priority:29},
+    {id:'divar',name:'دیوار',en:'Divar',url:'https://divar.ir',search:'https://divar.ir/s/iran?q=',icon:'🧱',cat:'classifieds',color:'#a62626',rating:4.5,tag:'آگهی',desc:'خرید و فروش کالا، خودرو، ملک و خدمات به‌صورت آگهی',canFrame:false,priority:30},
+    {id:'sheypoor',name:'شیپور',en:'Sheypoor',url:'https://sheypoor.com',search:'https://sheypoor.com/all?q=',icon:'📋',cat:'classifieds',color:'#f57c00',rating:4.2,tag:'نیازمندی',desc:'آگهی خرید و فروش کالا، خودرو، ملک و خدمات',canFrame:false,priority:31},
+    {id:'fidibo',name:'فیدیبو',en:'Fidibo',url:'https://fidibo.com',search:'https://fidibo.com/search?q=',icon:'📚',cat:'book',color:'#0f766e',rating:4.4,tag:'کتاب دیجیتال',desc:'کتاب الکترونیک، صوتی و مجله',canFrame:false,priority:32},
+    {id:'taaghche',name:'طاقچه',en:'Taaghche',url:'https://taaghche.com',search:'https://taaghche.com/search?q=',icon:'📖',cat:'book',color:'#22c55e',rating:4.4,tag:'کتاب',desc:'کتاب الکترونیک و صوتی',canFrame:false,priority:33},
+    {id:'iranketab',name:'ایران کتاب',en:'Iran Ketab',url:'https://www.iranketab.ir',search:'https://www.iranketab.ir/Search/Index?SearchTerm=',icon:'📕',cat:'book',color:'#b91c1c',rating:4.3,tag:'کتاب چاپی',desc:'جستجو و خرید کتاب چاپی',canFrame:false,priority:34},
+    {id:'ketabrah',name:'کتابراه',en:'Ketabrah',url:'https://www.ketabrah.ir',search:'https://www.ketabrah.ir/search?search=',icon:'📘',cat:'book',color:'#2563eb',rating:4.3,tag:'کتاب دیجیتال',desc:'کتاب الکترونیکی و صوتی',canFrame:false,priority:35},
+    {id:'shahreketabonline',name:'شهر کتاب آنلاین',en:'Shahre Ketab Online',url:'https://shahreketabonline.com',search:'https://shahreketabonline.com/search?q=',icon:'🏛️',cat:'book',color:'#854d0e',rating:4.1,tag:'کتاب',desc:'فروش آنلاین کتاب و محصولات فرهنگی',canFrame:false,priority:36},
+    {id:'snappfood',name:'اسنپ‌فود',en:'Snapp Food',url:'https://snappfood.ir',search:'https://snappfood.ir/search/',icon:'🍔',cat:'food',color:'#e94e1b',rating:4.4,tag:'غذا',desc:'سفارش آنلاین غذا و رستوران',canFrame:false,priority:37},
+    {id:'alibaba',name:'علی‌بابا',en:'Alibaba',url:'https://www.alibaba.ir',search:'https://www.alibaba.ir/bus',icon:'✈️',cat:'travel',color:'#1976d2',rating:4.5,tag:'سفر',desc:'بلیط هواپیما، قطار و اتوبوس و خدمات سفر',canFrame:false,priority:38},
+    {id:'safarmarket',name:'سفرمارکت',en:'Safarmarket',url:'https://www.safarmarket.com',search:'https://www.safarmarket.com/search?q=',icon:'🧳',cat:'travel',color:'#0891b2',rating:4.3,tag:'سفر',desc:'مقایسه و خرید خدمات سفر',canFrame:false,priority:39},
+    {id:'koodakplus',name:'کودک پلاس',en:'Koodakplus',url:'https://koodakplus.com',search:'https://koodakplus.com/search?q=',icon:'🧸',cat:'kids',color:'#f97316',rating:4.0,tag:'کودک',desc:'اسباب‌بازی، سیسمونی و لوازم کودک',canFrame:false,priority:40},
+    {id:'irantimer',name:'ایران تایمر',en:'Iran Timer',url:'https://www.irantimer.com',search:'https://www.irantimer.com/search?q=',icon:'⌚',cat:'accessory',color:'#111827',rating:4.1,tag:'ساعت',desc:'ساعت مچی و اکسسوری',canFrame:false,priority:41},
+    {id:'miligold',name:'میلی گلد',en:'Mili Gold',url:'https://miligold.com',search:'https://miligold.com/search?q=',icon:'🪙',cat:'accessory',color:'#d97706',rating:4.1,tag:'طلا',desc:'خرید آنلاین طلا و مصنوعات مرتبط',canFrame:false,priority:42},
+    {id:'komodaa',name:'کمدا',en:'Komodaa',url:'https://komodaa.com',search:'https://komodaa.com/search?q=',icon:'♻️',cat:'fashion',color:'#16a34a',rating:4.0,tag:'مد دست‌دوم',desc:'خرید و فروش لباس و اکسسوری نو و دست‌دوم',canFrame:false,priority:43},
+    {id:'raahraah',name:'راه‌راه',en:'Raahraah',url:'https://raahraah.com',search:'https://raahraah.com/search?q=',icon:'🛤️',cat:'general',color:'#00bcd4',rating:4.0,tag:'فروشگاه',desc:'فروشگاه اینترنتی راه‌راه',canFrame:false,priority:44},
+];
+
+const CATEGORIES = [
+    {id:'all',name:'همه',icon:'🌟'},
+    {id:'compare',name:'مقایسه قیمت',icon:'🔎'},
+    {id:'general',name:'عمومی',icon:'🏬'},
+    {id:'marketplace',name:'بازارگاه',icon:'🌿'},
+    {id:'tech',name:'دیجیتال',icon:'📱'},
+    {id:'fashion',name:'مد و پوشاک',icon:'👗'},
+    {id:'beauty',name:'آرایشی و بهداشتی',icon:'💄'},
+    {id:'grocery',name:'سوپرمارکت',icon:'🛒'},
+    {id:'home',name:'خانه و لوازم خانگی',icon:'🏠'},
+    {id:'book',name:'کتاب و فرهنگ',icon:'📚'},
+    {id:'classifieds',name:'نیازمندی و آگهی',icon:'📋'},
+    {id:'food',name:'غذا و رستوران',icon:'🍔'},
+    {id:'travel',name:'سفر و بلیط',icon:'✈️'},
+    {id:'kids',name:'کودک',icon:'🧸'},
+    {id:'accessory',name:'اکسسوری و خاص',icon:'💎'},
+];
+
+const TRENDING = ['گوشی سامسونگ A55','لپ‌تاپ ایسوس','عطر مردانه','هدفون بلوتوث','کنسول پلی‌استیشن ۵','کفش نایک','ساعت هوشمند','پاوربانک'];
+const DEALS = [];
+
+/* ============================================================
+   سیستم نظرات
+   ============================================================ */
+let REVIEWS = load('persia_shop_reviews_data', []);
+if(!REVIEWS.length){
+    REVIEWS = [];
+}
+
+const AI_QA = [
+    {q:'سازنده پرشیا شاپ کیست؟', a:'پرشیا شاپ توسط <b>امیرمحمد گلستان</b> طراحی و توسعه داده شده است.'},
+    {q:'پرشیا شاپ چیست؟', a:'پرشیا شاپ یک <b>مرورگر و مقایسه‌گر خرید ایرانی</b> است که به شما امکان می‌دهد یک کالا را به‌طور همزمان در چندین فروشگاه اینترنتی معتبر جستجو کرده و قیمت‌ها را مقایسه کنید.'},
+    {q:'کاربرد پرشیا شاپ چیست؟', a:'از پرشیا شاپ می‌توان برای <b>مقایسه قیمت</b> کالاها، <b>مشاهده تخفیف‌ها</b>، <b>ذخیره فروشگاه‌های محبوب</b> و <b>دسترسی سریع</b> به فروشگاه‌های معتبر ایرانی استفاده کرد.'},
+    {q:'چگونه از پرشیا شاپ استفاده کنم؟', a:'کافی است نام کالای مورد نظر را در بخش مقایسه وارد کنید، فروشگاه‌های مدنظر را انتخاب کنید و نتایج را مشاهده نمایید.'},
+    {q:'چند فروشگاه در پرشیا شاپ وجود دارد؟', a:'در حال حاضر <b>۴۴ فروشگاه</b> معتبر ایرانی در پرشیا شاپ پشتیبانی می‌شوند.'},
+    {q:'آیا پرشیا شاپ رایگان است؟', a:'بله، پرشیا شاپ <b>کاملاً رایگان</b> است و هیچ هزینه‌ای برای استفاده از خدمات آن دریافت نمی‌شود.'},
+    {q:'چگونه تخفیف واقعی را پیدا کنم؟', a:'پرشیا شاپ تخفیف ساختگی نمایش نمی‌دهد. نام کالا را در موتورهای مقایسه مثل ترب و ایمالز جستجو کنید و قیمت و موجودی را در سایت مقصد بررسی کنید.'},
+    {q:'چگونه نظر خود را ثبت کنم؟', a:'در پایین بخش نظرات، می‌توانید امتیاز (ستاره) و نظر خود را وارد کرده و با کلیک روی دکمه ثبت، نظرتان را ارسال کنید.'},
+    {q:'آیا پرشیا شاپ امن است؟', a:'بله، پرشیا شاپ فقط شما را به فروشگاه‌های معتبر هدایت می‌کند و هیچ اطلاعات بانکی یا شخصی شما را ذخیره نمی‌کند.'},
+    {q:'چگونه می‌توانم به نظرات پاسخ دهم؟', a:'روی دکمه <b>پاسخ</b> در زیر هر نظر کلیک کنید، سپس نظر خود را بنویسید و ثبت کنید.'},
+];
+
+/* ============================================================
+   وضعیت برنامه
+   ============================================================ */
+let currentNav='home';
+let currentCat='all';
+let selectedShops=new Set(['digikala','torob','technolife','snappmarket']);
+let favorites=load('persia_shop_favs',[]);
+let recentSearches=load('persia_shop_recent',[]);
+let isDark=load('persia_shop_dark',true);
+let currentUser=load('persia_shop_user',null);
+let isLogin=true;
+let viewerShop=null,viewerQuery='',viewerUrl='';
+let currentModalLink='';
+let selectedStar=0;
+let replyTarget=null;
+let tourStep=0;
+let notifEnabled=true,notifInt=null;
+
+const tourSteps = [
+    {icon:'🚀', title:'به پرشیا شاپ خوش آمدید!', desc:'این برنامه به شما کمک می‌کند بهترین قیمت‌ها را از فروشگاه‌های معتبر ایران پیدا کنید.'},
+    {icon:'🔍', title:'جستجوی هوشمند', desc:'در بخش اصلی، نام هر کالا را وارد کنید و نتایج را از چند فروشگاه همزمان مشاهده کنید.'},
+    {icon:'⚖️', title:'مقایسه قیمت', desc:'با دکمه وسط نوار پایین، وارد بخش مقایسه شوید و فروشگاه‌های مدنظر را انتخاب کنید.'},
+    {icon:'❤️', title:'علاقه‌مندی‌ها', desc:'با کلیک روی ❤️ کنار هر فروشگاه، آن را ذخیره کنید و سریعاً به آن دسترسی داشته باشید.'},
+    {icon:'⚙️', title:'شخصی‌سازی', desc:'در بخش تنظیمات، تم و فونت مورد علاقه خود را انتخاب کنید و برنامه را مطابق سلیقه خود تغییر دهید.'},
+    {icon:'🤖', title:'هوش مصنوعی', desc:'از منو، گزینه هوش مصنوعی را انتخاب کنید و سوالات خود را درباره پرشیا شاپ بپرسید.'},
+];
+
+const shopById=id=>SHOPS.find(s=>s.id===id);
+const starsHTML=r=>'★'.repeat(Math.round(r))+'☆'.repeat(5-Math.round(r));
+
+/* ============================================================
+   ابزارها
+   ============================================================ */
+function load(k,def){try{const v=localStorage.getItem(k);return v?JSON.parse(v):def;}catch(e){return def;}}
+function save(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
+function faNum(n){return String(n).replace(/[0-9]/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);}
+
+let sbT;
+function showSnackbar(msg,type='info'){
+    const el=document.getElementById('snackbar');
+    if(!el) return;
+    el.textContent=msg;el.className='snackbar '+type+' show';
+    clearTimeout(sbT);sbT=setTimeout(()=>el.classList.remove('show'),2800);
+}
+function copyText(txt){
+    const done=()=>{showSnackbar('✅ لینک کپی شد','success');};
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(txt).then(done).catch(()=>fallbackCopy(txt,done));
+    }else fallbackCopy(txt,done);
+}
+function fallbackCopy(txt,cb){
+    const ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';
+    document.body.appendChild(ta);ta.select();try{document.execCommand('copy');cb&&cb();}catch(e){showSnackbar('❌ کپی ناموفق','error');}ta.remove();
+}
+
+/* ============================================================
+   اسپلش
+   ============================================================ */
+(function(){
+    const c=document.getElementById('particles');
+    if(c)for(let i=0;i<32;i++){
+        const s=document.createElement('span');
+        s.style.left=Math.random()*100+'%';
+        s.style.animationDuration=(Math.random()*14+10)+'s';
+        s.style.animationDelay=(Math.random()*14)+'s';
+        const sz=Math.random()*4+2;s.style.width=sz+'px';s.style.height=sz+'px';
+        c.appendChild(s);
+    }
+})();
+setTimeout(()=>{const sp=document.getElementById('splash');if(sp){sp.classList.add('hide');setTimeout(()=>sp.style.display='none',800);}},2800);
+
+/* ============================================================
+   تم و فونت
+   ============================================================ */
+function setTheme(theme){
+    document.body.className = document.body.className.split(' ').filter(c=>!c.startsWith('theme-')).join(' ');
+    if(theme!=='default') document.body.classList.add('theme-'+theme);
+    document.querySelectorAll('#themeOptions .opt').forEach(el=>el.classList.toggle('active',el.dataset.theme===theme));
+    save('persia_shop_theme',theme);
+}
+function setFont(font){
+    document.body.className = document.body.className.split(' ').filter(c=>!c.startsWith('font-')).join(' ');
+    document.body.classList.add('font-'+font);
+    document.querySelectorAll('#fontOptions .opt').forEach(el=>el.classList.toggle('active',el.dataset.font===font));
+    save('persia_shop_font',font);
+}
+function loadTheme(){
+    const t=load('persia_shop_theme','default');
+    if(t!=='default'){document.body.classList.add('theme-'+t);}
+    document.querySelectorAll('#themeOptions .opt').forEach(el=>el.classList.toggle('active',el.dataset.theme===t));
+    const f=load('persia_shop_font','vazir');
+    document.body.classList.add('font-'+f);
+    document.querySelectorAll('#fontOptions .opt').forEach(el=>el.classList.toggle('active',el.dataset.font===f));
+}
+function loadDark(){
+    if(isDark){document.body.classList.add('dark');document.getElementById('darkIcon').textContent='☀️';}
+}
+
+/* ============================================================
+   رندر نظرات
+   ============================================================ */
+function renderReviews(){
+    const el=document.getElementById('reviewsGrid');
+    if(!el) return;
+    if(!REVIEWS.length){
+        el.innerHTML=`<div class="empty" style="grid-column:1/-1;"><div class="em">💬</div><div class="t">نظری ثبت نشده است</div><div class="s">اولین نفری باشید که نظر می‌دهید!</div></div>`;
+        updateReviewStats();
+        return;
+    }
+    let total=0, count=0;
+    const sorted = [...REVIEWS].reverse();
+    el.innerHTML=sorted.map(r=>{
+        total += r.stars; count++;
+        const lid='rv_'+r.id;
+        const likes = r.likes || 0;
+        const dislikes = r.dislikes || 0;
+        return `<div class="review-card" id="review-${r.id}">
+            <div class="rv-head">
+                <div class="rv-avatar">${r.name[0]}</div>
+                <div class="rv-info">
+                    <div class="rv-name">${r.name}</div>
+                    <div class="rv-stars">${'★'.repeat(Math.round(r.stars))}</div>
+                </div>
+            </div>
+            <div class="rv-text">${r.text}</div>
+            <div class="rv-actions">
+                <button class="${r.userLiked===1?'liked':''}" onclick="likeReview(${r.id},1)">👍 <span class="count">${likes}</span></button>
+                <button class="${r.userLiked===-1?'disliked':''}" onclick="likeReview(${r.id},-1)">👎 <span class="count">${dislikes}</span></button>
+                <button onclick="replyToReview(${r.id},'${r.name}')">💬 پاسخ</button>
+            </div>
+            ${r.replies && r.replies.length ? `<div class="rv-replies">${r.replies.map(rep=>`
+                <div class="rv-reply">
+                    <div class="rv-head">
+                        <div class="rv-avatar">${rep.name[0]}</div>
+                        <div class="rv-name">${rep.name}</div>
+                    </div>
+                    <div class="rv-text">${rep.text}</div>
+                </div>
+            `).join('')}</div>` : ''}
+        </div>`;
+    }).join('');
+    updateReviewStats();
+}
+function updateReviewStats(){
+    const total=REVIEWS.reduce((s,r)=>s+r.stars,0);
+    const avg=REVIEWS.length? (total/REVIEWS.length) : 0;
+    const avgEl=document.getElementById('avgScore');
+    if(avgEl) avgEl.textContent=avg.toFixed(1);
+    const starsEl=document.getElementById('avgStars');
+    if(starsEl) starsEl.textContent='★'.repeat(Math.round(avg))+'☆'.repeat(5-Math.round(avg));
+    const countEl=document.getElementById('reviewCount');
+    if(countEl) countEl.textContent=REVIEWS.length+' نظر';
+}
+function likeReview(id,dir){
+    const r=REVIEWS.find(r=>r.id===id);
+    if(!r) return;
+    if(!currentUser){showSnackbar('⚠️ لطفاً ابتدا وارد شوید','error');return;}
+    if(r.userLiked===dir){
+        if(dir===1) r.likes--;
+        else r.dislikes--;
+        r.userLiked=0;
+    }else{
+        if(r.userLiked===1) r.likes--;
+        else if(r.userLiked===-1) r.dislikes--;
+        r.userLiked=dir;
+        if(dir===1) r.likes++;
+        else r.dislikes++;
+    }
+    save('persia_shop_reviews_data', REVIEWS);
+    renderReviews();
+}
+function replyToReview(id,name){
+    replyTarget={id:id, name:name};
+    document.getElementById('replyIndicator').style.display='flex';
+    document.getElementById('replyToName').textContent=name;
+    document.getElementById('reviewText').focus();
+    showSnackbar('💬 در حال پاسخ به '+name,'info');
+}
+function cancelReply(){
+    replyTarget=null;
+    document.getElementById('replyIndicator').style.display='none';
+}
+function submitReview(){
+    if(!currentUser){showSnackbar('⚠️ لطفاً ابتدا وارد شوید','error');return;}
+    const text=document.getElementById('reviewText').value.trim();
+    if(!text){showSnackbar('⚠️ لطفاً متن نظر را بنویسید','error');return;}
+    if(selectedStar===0){showSnackbar('⚠️ لطفاً امتیاز (ستاره) را انتخاب کنید','error');return;}
+    const phone=currentUser.phone;
+    const existing=REVIEWS.find(r=>r.phone===phone);
+    if(existing && !replyTarget){showSnackbar('⚠️ شما قبلاً یک نظر ثبت کرده‌اید. فقط می‌توانید پاسخ دهید.','error');return;}
+    if(replyTarget){
+        const parent=REVIEWS.find(r=>r.id===replyTarget.id);
+        if(parent){
+            if(!parent.replies) parent.replies=[];
+            parent.replies.push({name:currentUser.username, text:text, phone:phone});
+            save('persia_shop_reviews_data', REVIEWS);
+            showSnackbar('✅ پاسخ شما ثبت شد!','success');
+            cancelReply();
+            document.getElementById('reviewText').value='';
+            selectedStar=0;
+            document.querySelectorAll('#starRating .star').forEach(s=>{s.textContent='☆';s.classList.remove('active');s.style.color='var(--text3)';});
+            renderReviews();
+        }
+        return;
+    }
+    const newReview={
+        id:Date.now(),
+        name:currentUser.username,
+        phone:phone,
+        text:text,
+        stars:selectedStar,
+        likes:0,
+        dislikes:0,
+        replies:[],
+        userLiked:0
+    };
+    REVIEWS.push(newReview);
+    save('persia_shop_reviews_data', REVIEWS);
+    renderReviews();
+    document.getElementById('reviewText').value='';
+    selectedStar=0;
+    document.querySelectorAll('#starRating .star').forEach(s=>{s.textContent='☆';s.classList.remove('active');s.style.color='var(--text3)';});
+    showSnackbar('✅ نظر شما با موفقیت ثبت شد!','success');
+}
+
+/* ============================================================
+   رندر خانه
+   ============================================================ */
+function renderTrending(){
+    const el=document.getElementById('trendingChips');
+    if(!el) return;
+    el.innerHTML=TRENDING.map(t=>`<div class="chip" onclick="goCompare('${t.replace(/'/g,"\\'")}')">${t}</div>`).join('');
+}
+function renderHomeCats(){
+    const el=document.getElementById('homeCats');
+    if(!el) return;
+    el.innerHTML=CATEGORIES.filter(c=>c.id!=='all').map(c=>{
+        const cnt=SHOPS.filter(s=>s.cat===c.id).length;
+        return `<div class="cat-tile" onclick="goCat('${c.id}')"><div class="em">${c.icon}</div><div class="nm">${c.name}</div><div class="cnt">${faNum(cnt)} فروشگاه</div></div>`;
+    }).join('');
+}
+function shopCardHTML(s){
+    const isFav=favorites.includes(s.id);
+    return `<div class="shop-card" onclick="openViewer('${s.id}','')">
+        <div class="fav ${isFav?'on':''}" onclick="event.stopPropagation();toggleFav('${s.id}')" title="افزودن به علاقه‌مندی">${isFav?'❤️':'🤍'}</div>
+        <div class="em" style="background:${s.color}22;">${s.icon}</div>
+        <div class="nm">${s.name}</div>
+        <div class="desc">${s.desc}</div>
+        <div class="rt"><span class="stars">${starsHTML(s.rating)}</span><span class="tag">${s.tag}</span></div>
+    </div>`;
+}
+function renderPopularShops(){
+    const el=document.getElementById('popularShops');
+    if(!el) return;
+    el.innerHTML=SHOPS.filter(s=>s.pop).map(shopCardHTML).join('');
+}
+function renderDeals(){
+    const el=document.getElementById('dealsList');
+    if(!el) return;
+    el.innerHTML=DEALS.map(d=>{
+        const s=shopById(d.shop);
+        if(!s) return '';
+        return `<div class="deal-card" onclick="openViewer('${d.shop}','')">
+            <div class="ph" style="background:${s.color}1a;"><div class="off">${d.off} تخفیف</div>${d.em}</div>
+            <div class="body"><div class="t">${d.t}</div><div class="from">از ${d.from}</div>
+            <div class="pr"><span class="now">${faNum(d.now)} ت</span><span class="old">${faNum(d.old)}</span></div></div>
+        </div>`;
+    }).join('');
+}
+function renderStats(){
+    const el=document.getElementById('statGrid');
+    if(!el) return;
+    const stats=[
+        {ic:'🏬',num:faNum(SHOPS.length),lbl:'فروشگاه متصل'},
+        {ic:'🏷️',num:faNum(CATEGORIES.length-1),lbl:'دسته‌بندی'},
+        {ic:'⚖️',num:'∞',lbl:'مقایسه نامحدود'},
+        {ic:'⭐',num:'۴٫۹',lbl:'امتیاز کاربران'},
+    ];
+    el.innerHTML=stats.map(s=>`<div class="stat-card"><div class="ic">${s.ic}</div><div class="num">${s.num}</div><div class="lbl">${s.lbl}</div></div>`).join('');
+}
+
+/* ============================================================
+   رندر فروشگاه‌ها
+   ============================================================ */
+function renderCatFilters(){
+    const el=document.getElementById('catFilters');
+    if(!el) return;
+    el.innerHTML=CATEGORIES.map(c=>
+        `<div class="fb ${currentCat===c.id?'active':''}" onclick="setCat('${c.id}')">${c.icon} ${c.name}</div>`).join('');
+}
+function setCat(c){currentCat=c;renderCatFilters();renderShopGrid();}
+function goCat(c){navigate('shops');setCat(c);}
+function renderShopGrid(){
+    const grid=document.getElementById('shopGrid');
+    if(!grid) return;
+    const q=(document.getElementById('shopFilter')?.value||'').trim().toLowerCase();
+    let list=SHOPS.filter(s=>currentCat==='all'||s.cat===currentCat);
+    if(q)list=list.filter(s=>(s.name+' '+s.en+' '+s.desc).toLowerCase().includes(q));
+    grid.innerHTML=list.length?list.map(shopCardHTML).join(''):`<div class="empty" style="grid-column:1/-1;"><div class="em">🔍</div><div class="t">فروشگاهی پیدا نشد</div><div class="s">عبارت دیگری را جستجو کنید</div></div>`;
+}
+function renderMenuShopLinks(){
+    const el=document.getElementById('menuShopLinks');
+    if(!el) return;
+    el.innerHTML=SHOPS.slice(0,6).map(s=>
+        `<div class="item" onclick="openViewer('${s.id}','');toggleMenu();"><span class="ic" style="background:${s.color}22;">${s.icon}</span><span class="tx">${s.name}</span><span class="arr">›</span></div>`).join('');
+}
+
+/* ============================================================
+   هوش مصنوعی پاپ‌آپ
+   ============================================================ */
+function openAIPopup(){
+    document.getElementById('aiPopup').classList.add('open');
+    renderAIQuestionsPopup();
+}
+function closeAIPopup(){document.getElementById('aiPopup').classList.remove('open');}
+function renderAIQuestionsPopup(){
+    const el=document.getElementById('aiQuestionsList');
+    if(!el) return;
+    el.innerHTML=AI_QA.map((item,i)=>`
+        <div class="ai-q" onclick="askAIPopup(${i})">
+            <span class="qic">❓</span>
+            <span class="qtext">${item.q}</span>
+        </div>
+    `).join('');
+}
+function askAIPopup(index){
+    const q=AI_QA[index];
+    const resp=document.getElementById('aiResponsePopup');
+    if(!resp) return;
+    const fullText=q.a;
+    resp.innerHTML='';
+    const typingDiv=document.createElement('div');
+    typingDiv.className='typing-indicator';
+    typingDiv.innerHTML='<span></span><span></span><span></span>';
+    resp.appendChild(typingDiv);
+    let i=0;
+    const typeInterval=setInterval(()=>{
+        if(i<fullText.length){
+            if(i===0) resp.innerHTML='';
+            resp.innerHTML += fullText[i];
+            i++;
+        }else{
+            clearInterval(typeInterval);
+            const cursor=document.createElement('span');
+            cursor.className='cursor';
+            resp.appendChild(cursor);
+            setTimeout(()=>{if(cursor.parentNode) cursor.remove();},2000);
+        }
+    }, 45);
+}
+
+/* ============================================================
+   راهنمای تعاملی
+   ============================================================ */
+function startTour(){
+    tourStep=0;
+    document.getElementById('tourOverlay').classList.add('open');
+    showTourStep();
+}
+function showTourStep(){
+    const step=tourSteps[tourStep];
+    if(!step){endTour();return;}
+    document.getElementById('tourIcon').textContent=step.icon;
+    document.getElementById('tourTitle').textContent=step.title;
+    document.getElementById('tourDesc').textContent=step.desc;
+    const dots=document.getElementById('tourDots');
+    dots.innerHTML=tourSteps.map((_,i)=>`<span class="dot ${i===tourStep?'active':''}"></span>`).join('');
+    document.getElementById('tourPrev').style.display=tourStep===0?'none':'inline-block';
+    document.getElementById('tourNext').textContent=tourStep===tourSteps.length-1?'✅ پایان':'بعدی ›';
+}
+function nextTour(){
+    if(tourStep<tourSteps.length-1){tourStep++;showTourStep();}
+    else endTour();
+}
+function prevTour(){
+    if(tourStep>0){tourStep--;showTourStep();}
+}
+function endTour(){
+    document.getElementById('tourOverlay').classList.remove('open');
+    showSnackbar('✅ راهنما به پایان رسید!','success');
+}
+
+/* ============================================================
+   علاقه‌مندی
+   ============================================================ */
+function toggleFav(id){
+    const i=favorites.indexOf(id);
+    if(i>=0){favorites.splice(i,1);showSnackbar('💔 از علاقه‌مندی‌ها حذف شد','info');}
+    else{favorites.push(id);showSnackbar('❤️ به علاقه‌مندی‌ها اضافه شد','success');}
+    save('persia_shop_favs',favorites);
+    renderPopularShops();renderShopGrid();renderFav();updateFavBadge();
+}
+function updateFavBadge(){
+    const b=document.getElementById('favBadge');
+    if(!b) return;
+    if(favorites.length){b.style.display='flex';b.textContent=faNum(favorites.length);}else b.style.display='none';
+}
+function renderFav(){
+    const grid=document.getElementById('favGrid');
+    const panel=document.getElementById('favPanel');
+    if(!grid||!panel) return;
+    if(!favorites.length){
+        panel.style.display='block';
+        grid.innerHTML=`<div class="empty" style="grid-column:1/-1;"><div class="em">❤️</div><div class="t">هنوز موردی اضافه نکرده‌اید</div><div class="s">با ❤️ کنار هر فروشگاه آن را ذخیره کنید</div><button class="b" onclick="navigate('shops')">مشاهده فروشگاه‌ها</button></div>`;
+        return;
+    }
+    panel.style.display='block';
+    panel.innerHTML=`<div class="hint" style="margin:0;"><span>⭐</span> ${faNum(favorites.length)} فروشگاه ذخیره شده — برای مقایسه سریع آماده است. <span onclick="quickCompareFavs()" style="color:var(--primary);cursor:pointer;font-weight:700;">مقایسه همه ›</span></div>`;
+    grid.innerHTML=favorites.map(id=>{const s=shopById(id);return s?shopCardHTML(s):'';}).join('');
+}
+function quickCompareFavs(){
+    if(favorites.length<1)return;
+    selectedShops=new Set(favorites);
+    renderPickGrid();
+    navigate('compare');
+    showSnackbar('⚖️ فروشگاه‌های علاقه‌مندی برای مقایسه انتخاب شدند','info');
+}
+
+/* ============================================================
+   ناوبری
+   ============================================================ */
+function navigate(p){
+    currentNav=p;
+    document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
+    document.querySelectorAll('.nav-item').forEach(el=>el.classList.remove('active'));
+    const page=document.getElementById('page-'+p);
+    if(page)page.classList.add('active');
+    const nav=document.querySelector(`.nav-item[data-nav="${p}"]`);
+    if(nav)nav.classList.add('active');
+    if(p==='shops')renderShopGrid();
+    if(p==='fav')renderFav();
+    if(p==='compare')renderPickGrid();
+    if(p==='home'){renderReviews();}
+    window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ============================================================
+   مودال لینک
+   ============================================================ */
+function showLinkModal(url){
+    currentModalLink=url;
+    const addr=document.getElementById('linkAddr');
+    if(addr) addr.textContent=url;
+    const modal=document.getElementById('linkModal');
+    if(modal) modal.classList.add('open');
+}
+function closeLinkModal(){const m=document.getElementById('linkModal');if(m)m.classList.remove('open');}
+function copyModalLink(){copyText(currentModalLink);}
+function openModalLink(){window.open(currentModalLink,'_blank');showSnackbar('🌐 در تب جدید باز شد','success');}
+function openLinkFromSearch(){
+    showSnackbar('🔗 برای دریافت لینک، ابتدا یک کالا را در بخش مقایسه جستجو کنید یا یک فروشگاه را باز کنید','info');
+    navigate('compare');
+}
+
+/* ============================================================
+   بیننده سایت
+   ============================================================ */
+function openViewer(id,query){
+    const s=shopById(id);if(!s)return;
+    viewerShop=s;viewerQuery=query;
+    viewerUrl=query?s.search+encodeURIComponent(query):s.url;
+    const em=document.getElementById('vEm');if(em){em.textContent=s.icon;em.style.background=s.color+'22';}
+    const nm=document.getElementById('vNm');if(nm)nm.textContent=query?(s.name+' — جستجوی «'+query+'»'):s.name;
+    const urlEl=document.getElementById('vUrl');if(urlEl)urlEl.textContent=viewerUrl;
+    const ov=document.getElementById('vOvly');
+    if(ov)ov.classList.remove('hide');
+    const loadT=document.getElementById('vLoadT');if(loadT)loadT.textContent='در حال بارگذاری '+s.name+'...';
+    const loadS=document.getElementById('vLoadS');if(loadS)loadS.textContent=s.desc;
+    const f=document.getElementById('vFrame');
+    if(f){
+        f.onload=()=>{setTimeout(()=>{if(ov)ov.classList.add('hide');},500);};
+        clearTimeout(window._vFailT);
+        window._vFailT=setTimeout(()=>{
+            if(ov&&!ov.classList.contains('hide')){
+                ov.innerHTML=`<div class="big-em">${s.icon}</div><div class="t">${s.name}</div>
+                    <div class="s">این سایت اجازه نمایش درون‌برنامه‌ای نمی‌دهد. می‌توانید آن را مستقیماً در تب جدید باز کنید یا لینک دقیق آن را دریافت کنید.</div>
+                    <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+                        <button class="b" onclick="openViewerExternal()">↗ باز کردن در سایت</button>
+                        <button class="b" style="background:var(--gradient-gold);color:#3d2b00;" onclick="copyCurrentViewerLink()">🔗 دریافت لینک</button>
+                    </div>`;
+            }
+        },6500);
+        f.src=viewerUrl;
+    }
+    const viewer=document.getElementById('viewer');
+    if(viewer)viewer.classList.add('open');
+    document.body.style.overflow='hidden';
+}
+function closeViewer(){
+    const viewer=document.getElementById('viewer');
+    if(viewer)viewer.classList.remove('open');
+    const f=document.getElementById('vFrame');
+    if(f)f.src='about:blank';
+    document.body.style.overflow='';
+    clearTimeout(window._vFailT);
+}
+function refreshViewer(){
+    const f=document.getElementById('vFrame');
+    if(!f)return;
+    const src=f.src;f.src='about:blank';setTimeout(()=>f.src=src,150);
+    showSnackbar('🔄 بارگذاری مجدد','info');
+}
+function copyCurrentViewerLink(){showLinkModal(viewerUrl);}
+function openViewerExternal(){window.open(viewerUrl,'_blank');showSnackbar('🌐 در تب جدید باز شد','success');}
+
+/* ============================================================
+   مقایسه
+   ============================================================ */
+function renderPickGrid(){
+    const el=document.getElementById('pickGrid');
+    if(!el) return;
+    el.innerHTML=SHOPS.map(s=>`<div class="pick ${selectedShops.has(s.id)?'on':''}" onclick="togglePick('${s.id}')">
+        <div class="chk">✓</div><div class="em">${s.icon}</div><div class="nm">${s.name}</div></div>`).join('');
+}
+function togglePick(id){
+    if(selectedShops.has(id))selectedShops.delete(id);else selectedShops.add(id);
+    renderPickGrid();
+}
+function selectAllShops(on){
+    selectedShops=on?new Set(SHOPS.map(s=>s.id)):new Set();
+    renderPickGrid();
+    showSnackbar(on?'✅ همه فروشگاه‌ها انتخاب شدند':'🗑️ انتخاب‌ها پاک شد','info');
+}
+function goCompare(query){
+    query=(query||'').trim();
+    if(!query){showSnackbar('🔍 لطفاً نام کالا را وارد کنید','info');return;}
+    const input=document.getElementById('cmpInput');
+    if(input) input.value=query;
+    navigate('compare');
+    addRecent(query);
+    runCompare();
+}
+function runCompare(){
+    const q=(document.getElementById('cmpInput')?.value||'').trim();
+    if(!q){showSnackbar('🔍 لطفاً نام کالا را وارد کنید','info');return;}
+    addRecent(q);
+    const list=SHOPS.filter(s=>selectedShops.has(s.id)).sort((a,b)=>(b.canFrame===true)-(a.canFrame===true)||(a.priority||99)-(b.priority||99));
+    if(!list.length){showSnackbar('⚠️ حداقل یک فروشگاه انتخاب کنید','error');return;}
+    const res=document.getElementById('cmpResults');
+    if(!res) return;
+    const links=list.map(s=>s.search+encodeURIComponent(q));
+    let html=`<div class="sec-title"><span class="bar"></span> نتایج مقایسه «${q}» <span class="more" onclick="copyAllLinks()">🔗 دریافت همه لینک‌ها</span></div>`;
+    html+=`<div class="cmp-panel" style="margin-bottom:14px;"><div class="cmp-priority-note">💡 نتایج بر اساس احتمال نمایش مستقیم داخل برنامه و سپس اعتبار/ارتباط دسته‌بندی مرتب شده‌اند. کادر هر سایت قابل تغییر ارتفاع است. اگر سایتی اجازه نمایش مستقیم نداد، از دکمه باز کردن یا لینک دقیق استفاده کنید. (${faNum(list.length)} فروشگاه)</div></div>`;
+    html+=`<div class="cmp-results">`;
+    list.forEach((s,i)=>{
+        const url=links[i];
+        html+=`<div class="cmp-card ${s.canFrame?'can-frame':''}">
+            <div class="ch">
+                <div class="em" style="background:${s.color}22;">${s.icon}</div>
+                <div class="inf"><div class="nm">${s.name}</div><div class="url">${url}</div></div>
+                <div class="acts">
+                    <button onclick="copyText('${url.replace(/'/g,"\\'")}')" title="کپی لینک">📋</button>
+                    <button onclick="window.open('${url}','_blank')" title="باز کردن">↗</button>
+                    <button onclick="refreshCmpFrame('cmpf-${s.id}')" title="بارگذاری مجدد">🔄</button>
+                </div>
+            </div>
+            <div class="frame-wrap">
+                <div class="ovly" id="cmpov-${s.id}"><div class="sp"></div><div style="font-size:12px;">در حال بارگذاری نتایج ${s.name}...</div></div>
+                <iframe id="cmpf-${s.id}" src="${url}" onload="setTimeout(()=>{const o=document.getElementById('cmpov-${s.id}');if(o)o.classList.add('hide');},500)"></iframe>
+            </div>
+            <div class="cf">
+                <div class="lnk" title="کلیک برای کپی" onclick="copyText('${url.replace(/'/g,"\\'")}')">${url}</div>
+                <button class="btn-g" onclick="showLinkModal('${url.replace(/'/g,"\\'")}')">🔗 لینک دقیق</button>
+            </div>
+        </div>`;
+    });
+    html+=`</div>`;
+    res.innerHTML=html;
+    list.forEach(s=>{
+        setTimeout(()=>{
+            const o=document.getElementById('cmpov-'+s.id);
+            if(o&&!o.classList.contains('hide')){
+                o.innerHTML=`<div style="font-size:30px;">🔒</div><div style="font-size:12px;font-weight:700;">${s.name}</div>
+                <div style="font-size:11px;max-width:220px;line-height:1.6;">نمایش درون‌برنامه‌ای محدود است. با دکمه پایین باز کنید یا لینک بگیرید.</div>`;
+            }
+        },7000);
+    });
+    showSnackbar(`⚖️ در حال مقایسه در ${faNum(list.length)} فروشگاه...`,'info');
+    setTimeout(()=>showSnackbar('✅ نتایج آماده است — ارزان‌ترین را پیدا کنید!','success'),1200);
+}
+function refreshCmpFrame(fid){
+    const f=document.getElementById(fid);if(!f)return;const src=f.src;f.src='about:blank';setTimeout(()=>f.src=src,150);
+    const ov=document.getElementById('cmpov-'+fid.replace('cmpf-',''));if(ov)ov.classList.remove('hide');
+}
+function copyAllLinks(){
+    const q=(document.getElementById('cmpInput')?.value||'').trim();
+    const list=SHOPS.filter(s=>selectedShops.has(s.id)).sort((a,b)=>(b.canFrame===true)-(a.canFrame===true)||(a.priority||99)-(b.priority||99));
+    const txt='🛍️ مقایسه قیمت «'+q+'» در پرشیا شاپ:\n\n'+list.map(s=>`${s.icon} ${s.name}:\n${s.search+encodeURIComponent(q)}`).join('\n\n');
+    copyText(txt);
+}
+function addRecent(q){
+    recentSearches=[q,...recentSearches.filter(x=>x!==q)].slice(0,8);
+    save('persia_shop_recent',recentSearches);
+}
+
+/* ============================================================
+   جستجوی گوگل و تصویری
+   ============================================================ */
+function openGoogleSearch(){
+    const q=prompt('🔍 جستجو در گوگل:','');
+    if(q&&q.trim())window.open('https://www.google.com/search?q='+encodeURIComponent(q.trim()),'_blank');
+}
+function openImageSearch(){
+    const input=document.createElement('input');input.type='file';input.accept='image/*';input.capture='environment';input.style.display='none';
+    document.body.appendChild(input);
+    input.onchange=function(e){const file=e.target.files[0];if(file){showSnackbar('📸 در حال تحلیل تصویر...','info');setTimeout(()=>{window.open('https://lens.google.com/','_blank');showSnackbar('🔍 جستجوی تصویری در گوگل لنز','success');},1200);}input.remove();};
+    input.click();showSnackbar('📸 یک عکس انتخاب کنید','info');
+}
+
+/* ============================================================
+   دارک مود / تمام صفحه / اعلان‌ها
+   ============================================================ */
+function toggleDarkMode(){
+    isDark=!isDark;document.body.classList.toggle('dark',isDark);
+    const icon=document.getElementById('darkIcon');
+    if(icon)icon.textContent=isDark?'☀️':'🌙';
+    save('persia_shop_dark',isDark);
+    showSnackbar(isDark?'🌙 حالت تاریک فعال شد':'☀️ حالت روشن فعال شد','info');
+}
+function toggleFullscreen(){
+    if(!document.fullscreenElement){document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();showSnackbar('⛶ حالت تمام صفحه فعال شد','info');}
+    else{document.exitFullscreen&&document.exitFullscreen();showSnackbar('⛶ خروج از تمام صفحه','info');}
+}
+function toggleNotifications(){
+    notifEnabled=!notifEnabled;
+    const st=document.getElementById('notifStatus');
+    if(st){st.textContent=notifEnabled?'فعال':'غیرفعال';st.style.color=notifEnabled?'var(--green)':'var(--red)';}
+    if(notifEnabled){startNotifInt();showSnackbar('🔔 اعلان‌ها فعال شد','success');}
+    else{stopNotifInt();showSnackbar('🔕 اعلان‌ها غیرفعال شد','error');}
+    save('persia_shop_notif',notifEnabled);
+}
+function startNotifInt(){
+    if(notifInt)clearInterval(notifInt);
+    notifInt=setInterval(()=>{if(notifEnabled)showNotif();},600000);
+    setTimeout(()=>{if(notifEnabled)showNotif();},8000);
+}
+function stopNotifInt(){if(notifInt){clearInterval(notifInt);notifInt=null;}}
+const NOTIF_MSGS=[
+    {t:'🛍️ وقت خرید!',m:'از فروشگاه‌های معتبر با بهترین قیمت‌ها خرید کنید'},
+    {t:'🔥 تخفیف‌های ویژه',m:'تخفیف‌های شگفت‌انگیز در فروشگاه‌ها منتظر شماست'},
+    {t:'💰 بهترین قیمت‌ها',m:'قیمت‌ها را مقایسه کنید و ارزان‌ترین را انتخاب کنید'},
+    {t:'⚖️ مقایسه کن!',m:'یک کالا را در چند فروشگاه همزمان مقایسه کنید'},
+    {t:'🔎 جستجوی واقعی',m:'نام کالا را وارد کنید و قیمت را در سایت مقصد ببینید'},
+];
+function showNotif(){
+    const r=NOTIF_MSGS[Math.floor(Math.random()*NOTIF_MSGS.length)];
+    const t=document.getElementById('notifT');if(t)t.textContent=r.t;
+    const m=document.getElementById('notifM');if(m)m.textContent=r.m;
+    const tm=document.getElementById('notifTm');if(tm)tm.textContent=new Date().toLocaleTimeString('fa-IR');
+    const n=document.getElementById('notif');if(n)n.classList.add('show');
+    setTimeout(()=>{if(n)n.classList.remove('show');},9000);
+}
+function closeNotif(){const n=document.getElementById('notif');if(n)n.classList.remove('show');}
+
+/* ============================================================
+   منو / احراز هویت
+   ============================================================ */
+function toggleMenu(){
+    const overlay=document.getElementById('menuOverlay');
+    const side=document.getElementById('menuSide');
+    if(overlay)overlay.classList.toggle('open');
+    if(side)side.classList.toggle('open');
+}
+function openAuthModal(){
+    const modal=document.getElementById('authModal');
+    if(!modal)return;
+    modal.classList.add('open');
+    const title=document.getElementById('authTitle');
+    const btn=document.getElementById('authSubmitBtn');
+    const sw=document.getElementById('switchAuthText');
+    if(title)title.textContent=isLogin?'ورود':'ثبت‌نام';
+    if(btn)btn.textContent=isLogin?'ورود':'ثبت‌نام';
+    if(sw)sw.textContent=isLogin?'ثبت‌نام':'ورود';
+}
+function closeAuthModal(){const m=document.getElementById('authModal');if(m)m.classList.remove('open');}
+function switchAuthMode(){isLogin=!isLogin;openAuthModal();}
+function handleAuth(e){
+    e.preventDefault();
+    const u=document.getElementById('authUsername')?.value.trim();
+    const p=document.getElementById('authPhone')?.value.trim();
+    if(!u||!p){showSnackbar('❌ لطفاً همه فیلدها را پر کنید','error');return;}
+    currentUser={username:u,phone:p};save('persia_shop_user',currentUser);
+    updateProfile();closeAuthModal();
+    showSnackbar(`✅ خوش آمدید ${u}`,'success');
+    const form=document.getElementById('authForm');
+    if(form)form.reset();
+}
+function logout(){currentUser=null;localStorage.removeItem('persia_shop_user');updateProfile();showSnackbar('🚪 خارج شدید','info');}
+function updateProfile(){
+    const n=document.getElementById('pName'),em=document.getElementById('pEmail');
+    const ab=document.getElementById('authBtn'),lb=document.getElementById('logoutBtn');
+    if(currentUser){
+        if(n)n.textContent=currentUser.username;
+        if(em)em.textContent=currentUser.phone;
+        if(ab)ab.style.display='none';
+        if(lb)lb.style.display='inline-block';
+    }else{
+        if(n)n.textContent='کاربر مهمان';
+        if(em)em.textContent='وارد شوید';
+        if(ab)ab.style.display='inline-block';
+        if(lb)lb.style.display='none';
+    }
+}
+
+/* ============================================================
+   درباره / پاک‌سازی / بروزرسانی
+   ============================================================ */
+function showAbout(){
+    showSnackbar('👨‍💻 پرشیا شاپ — امیرمحمد گلستان | هرگونه بهره برداری و کپی، پیگرد قانونی دارد.','info');
+}
+function clearData(){
+    if(!confirm('همه داده‌های ذخیره شده (علاقه‌مندی، حساب، نظرات و...) پاک شود؟'))return;
+    localStorage.clear();
+    favorites=[];currentUser=null;recentSearches=[];REVIEWS=[];
+    save('persia_shop_reviews_data', REVIEWS);
+    updateProfile();renderPopularShops();renderShopGrid();renderFav();updateFavBadge();renderReviews();
+    showSnackbar('🗑️ داده‌ها پاک شدند','success');
+}
+function refreshAll(){
+    showSnackbar('🔄 در حال بروزرسانی...','info');
+    document.querySelectorAll('iframe').forEach(f=>{if(f.src&&f.src!=='about:blank'){const s=f.src;f.src='about:blank';setTimeout(()=>f.src=s,150);}});
+    renderReviews();
+    setTimeout(()=>showSnackbar('✅ همه بروزرسانی شد','success'),2500);
+}
+
+/* ============================================================
+   ستاره‌های فرم
+   ============================================================ */
+document.addEventListener('DOMContentLoaded',function(){
+    const stars=document.querySelectorAll('#starRating .star');
+    stars.forEach(star=>{
+        star.addEventListener('click',function(){
+            const val=parseInt(this.dataset.value);
+            selectedStar=val;
+            stars.forEach(s=>{
+                const v=parseInt(s.dataset.value);
+                if(v<=val) s.classList.add('active');
+                else s.classList.remove('active');
+                s.textContent=v<=val?'★':'☆';
+            });
+        });
+        star.addEventListener('mouseenter',function(){
+            const val=parseInt(this.dataset.value);
+            stars.forEach(s=>{
+                const v=parseInt(s.dataset.value);
+                if(v<=val) s.style.color='var(--gold)';
+                else s.style.color='var(--text3)';
+            });
+        });
+        star.addEventListener('mouseleave',function(){
+            stars.forEach(s=>{
+                const v=parseInt(s.dataset.value);
+                if(v<=selectedStar) s.style.color='var(--gold)';
+                else s.style.color='var(--text3)';
+            });
+        });
+    });
+});
+
+/* ============================================================
+   راه‌اندازی اولیه
+   ============================================================ */
+function init(){
+    loadTheme();loadDark();
+    renderTrending();renderHomeCats();renderPopularShops();renderDeals();renderStats();renderReviews();
+    renderCatFilters();renderShopGrid();renderPickGrid();renderMenuShopLinks();renderFav();updateFavBadge();
+    const u=load('persia_shop_user',null);if(u)currentUser=u;updateProfile();
+    const n=load('persia_shop_notif',true);notifEnabled=n;
+    const st=document.getElementById('notifStatus');
+    if(st){st.textContent=n?'فعال':'غیرفعال';st.style.color=n?'var(--green)':'var(--red)';}
+    if(n)startNotifInt();
+    // نمایش خودکار راهنما برای بار اول
+    if(!load('persia_shop_tour_shown',false)){save('persia_shop_tour_shown',true);setTimeout(startTour,1500);}
+}
+init();
+
+/* API عمومی */
+window.__PERSIA={navigate,openViewer,runCompare,toggleFav,toggleDarkMode,toggleMenu,showLinkModal,copyAllLinks,likeReview,submitReview,startTour};
+console.log('%c🛍️ پرشیا شاپ — نسخه ۱۰','color:#7c3aed;font-size:16px;font-weight:bold;');
+console.log('%c👨‍💻 ساخته و طراحی شده توسط: امیرمحمد گلستان','color:#f59e0b;font-weight:bold;');
+console.log('🏬 ۴۴ فروشگاه متصل | ⚖️ موتور مقایسه قیمت | 🤖 دستیار هوشمند پرشیا');
+console.log('📦 تایپ __PERSIA در کنسول برای دسترسی به توابع');
+
+
+
+/* ============================================================
+   ارتقای کاربردی پرشیا شاپ — داده واقعی، بدون محصول/قیمت ساختگی
+   ============================================================ */
+(() => {
+    'use strict';
+    const CONTACT = 'amirmhmdglstan@gmail.com';
+    const legalText = 'این برنامه متعلق به امیرمحمد گلستان است و هرگونه بهره برداری و کپی، پیگرد قانونی دارد.';
+    const state = { q:'', cat:'all', picked:new Set(['torob','emalls','digikala','basalam','technolife']) };
+    const $ = id => document.getElementById(id);
+    const nowFa = () => new Date().toLocaleString('fa-IR');
+    const catsForReal = () => CATEGORIES.filter(c => c.id !== 'food' && c.id !== 'travel');
+    const getSearchUrl = (shop, q) => q ? shop.search + encodeURIComponent(q) : shop.url;
+    const clean = str => (str || '').toLowerCase().trim();
+    const copy = txt => { if(typeof copyText === 'function') copyText(txt); else navigator.clipboard?.writeText(txt); };
+    const relevant = () => {
+        const q = clean(state.q);
+        return SHOPS.filter(s => state.cat === 'all' || s.cat === state.cat)
+            .filter(s => !q || (s.name+' '+s.en+' '+s.desc+' '+s.tag).toLowerCase().includes(q) || true)
+            .sort((a,b) => (a.priority||99)-(b.priority||99));
+    };
+    const card = s => {
+        const url = getSearchUrl(s, state.q);
+        const picked = state.picked.has(s.id);
+        return `<article class="real-shop-card">
+            <div class="real-shop-head"><div class="real-shop-icon" style="background:${s.color}22">${s.icon}</div><div><div class="real-shop-name">${s.name}</div><div class="real-shop-tag">${s.tag} ${s.canFrame?'• نمایش مستقیم محتمل‌تر':''}</div></div></div>
+            <div class="real-shop-desc">${s.desc}</div>
+            <div class="real-shop-link">${url}</div>
+            <div class="real-shop-actions">
+                <a class="real-open" href="${url}" target="_blank" rel="noopener">باز کردن نتیجه واقعی</a>
+                <button class="real-copy" onclick="RealMarket.copyLink('${s.id}')">📋</button>
+                <button class="real-pick ${picked?'on':''}" onclick="RealMarket.togglePick('${s.id}')">${picked?'✓':'+'}</button>
+            </div>
+        </article>`;
+    };
+    const render = () => {
+        const grid = $('realShopResults'); if(!grid) return;
+        const list = relevant();
+        grid.innerHTML = list.map(card).join('');
+        const upd = $('realLastUpdate'); if(upd) upd.textContent = `آخرین بروزرسانی لینک‌ها: ${nowFa()} — ${faNum ? faNum(list.length) : list.length} منبع واقعی`;
+    };
+    const renderControls = () => {
+        const sel = $('realCategorySelect');
+        if(sel) sel.innerHTML = catsForReal().map(c => `<option value="${c.id}">${c.icon} ${c.name}</option>`).join('');
+        const pills = $('realQuickCategories');
+        if(pills) pills.innerHTML = catsForReal().map(c => `<button class="ps-pill ${state.cat===c.id?'active':''}" onclick="RealMarket.setCat('${c.id}')">${c.icon} ${c.name}</button>`).join('');
+    };
+    const api = {
+        setCat: id => { state.cat = id; const sel=$('realCategorySelect'); if(sel) sel.value=id; renderControls(); render(); },
+        togglePick: id => { state.picked.has(id) ? state.picked.delete(id) : state.picked.add(id); render(); showSnackbar?.('انتخاب فروشگاه‌های مقایسه بروزرسانی شد','info'); },
+        copyLink: id => { const shop = SHOPS.find(s=>s.id===id); if(shop) copy(getSearchUrl(shop, state.q)); },
+        openAll: () => { const picked = SHOPS.filter(s => state.picked.has(s.id)).slice(0,8); if(!state.q) return showSnackbar?.('ابتدا نام محصول را وارد کنید','error'); picked.forEach((s,i)=>setTimeout(()=>window.open(getSearchUrl(s,state.q),'_blank'), i*250)); },
+        compareNow: () => { if(!state.q) return showSnackbar?.('نام محصول را وارد کنید','error'); selectedShops = new Set([...state.picked]); const inp=$('cmpInput'); if(inp) inp.value=state.q; navigate('compare'); setTimeout(()=>runCompare(),150); },
+        suggestContact: () => openContactModal()
+    };
+    window.RealMarket = api;
+    document.addEventListener('DOMContentLoaded', () => {
+        const inp = $('realProductSearch');
+        inp?.addEventListener('input', e => { state.q = e.target.value.trim(); render(); });
+        const sel = $('realCategorySelect');
+        sel?.addEventListener('change', e => api.setCat(e.target.value));
+        renderControls(); render();
+        setInterval(render, 60000);
+    });
+    if(document.readyState !== 'loading'){ renderControls(); render(); }
+    window.openContactModal = () => $('contactModal')?.classList.add('open');
+    window.openFAQModal = () => { renderFAQ(); $('faqModal')?.classList.add('open'); };
+    window.openChangesModal = () => $('changesModal')?.classList.add('open');
+    window.closeUtilityModal = id => $(id)?.classList.remove('open');
+    window.acceptLegalNotice = () => { sessionStorage.setItem('persia_legal_seen','1'); $('legalPopup')?.classList.remove('open'); };
+    window.addEventListener('load', () => { setTimeout(()=>{ if(!sessionStorage.getItem('persia_legal_seen')) $('legalPopup')?.classList.add('open'); }, 650); });
+
+    const faqs = [
+        ['آیا پرشیا شاپ خودش کالا می‌فروشد؟','خیر. پرشیا شاپ برای جلوگیری از گمراهی، کالای ساختگی یا قیمت ساختگی نمایش نمی‌دهد و شما را به فروشگاه‌ها و موتورهای مقایسه واقعی هدایت می‌کند.'],
+        ['قیمت‌ها چطور بروزرسانی می‌شوند؟','قیمت نهایی داخل سایت مقصد نمایش داده می‌شود. لینک‌های جستجو در پرشیا شاپ لحظه‌ای ساخته و بروزرسانی می‌شوند، اما قیمت و موجودی را فروشگاه مقصد تعیین می‌کند.'],
+        ['چرا بعضی سایت‌ها داخل برنامه نمایش داده نمی‌شوند؟','بعضی فروشگاه‌ها به دلایل امنیتی اجازه نمایش در iframe نمی‌دهند. در این حالت دکمه «باز کردن» شما را مستقیم به سایت واقعی منتقل می‌کند.'],
+        ['چطور فروشگاه جدید پیشنهاد بدهم؟',`از بخش ارتباط با ما به ایمیل ${CONTACT} پیام بدهید.`],
+        ['آیا خرید از همه سایت‌ها تضمین شده است؟','پرشیا شاپ لینک سایت‌های شناخته‌شده را ارائه می‌کند، اما قبل از خرید باید نماد اعتماد، شرایط ارسال، گارانتی، نظر کاربران و قوانین مرجوعی را در سایت مقصد بررسی کنید.'],
+        ['بهترین روش مقایسه چیست؟','ابتدا در ترب و ایمالز قیمت حدودی را ببینید، سپس همان کالا را در فروشگاه‌های تخصصی مثل تکنولایف، خانومی، بانی‌مد و... بررسی کنید.']
+    ];
+    window.renderFAQ = () => { const box=$('faqList'); if(box) box.innerHTML = faqs.map((f,i)=>`<div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">${i+1}. ${f[0]}</div><div class="faq-a">${f[1]}</div></div>`).join(''); };
+
+    const botReply = (text) => {
+        const t = clean(text);
+        if(!t) return 'لطفاً سوال یا نام محصول را بنویسید.';
+        if(t.includes('مالک') || t.includes('کپی') || t.includes('قانون')) return legalText;
+        if(t.includes('تماس') || t.includes('ارتباط') || t.includes('ایمیل')) return `برای ارتباط با امیرمحمد گلستان از ایمیل <a href="mailto:${CONTACT}">${CONTACT}</a> استفاده کنید.`;
+        if(t.includes('قیمت') || t.includes('ارزان') || t.includes('مقایسه')) return 'برای مقایسه واقعی قیمت، نام کالا را در صفحه اصلی یا بخش مقایسه وارد کنید. پیشنهاد من: ابتدا ترب و ایمالز، سپس فروشگاه‌های تخصصی همان دسته را بررسی کنید.';
+        if(t.includes('موبایل') || t.includes('گوشی') || t.includes('لپ تاپ') || t.includes('هدفون')) return 'برای کالای دیجیتال، دیجی‌کالا، تکنولایف، موبایل۱۴۰، کالاتیک، شهر فافا، مقداد آی‌تی، لیون کامپیوتر و ۱۹کالا را بررسی کنید. گارانتی و رجیستری را حتماً در سایت مقصد چک کنید.';
+        if(t.includes('لباس') || t.includes('پوشاک') || t.includes('کفش')) return 'برای پوشاک و کفش، دیجی‌استایل، مدیسه، بانی‌مد، شیکسون و کمدا گزینه‌های مرتبط هستند. حتماً جدول سایز و شرایط مرجوعی را بررسی کنید.';
+        if(t.includes('آرایشی') || t.includes('عطر') || t.includes('کرم') || t.includes('پوست')) return 'برای آرایشی و بهداشتی، خانومی، مو تن رو، روژا و عطر افشان را بررسی کنید. به اصالت کالا، تاریخ انقضا و فروشنده توجه کنید.';
+        if(t.includes('کتاب')) return 'برای کتاب، فیدیبو و طاقچه برای نسخه دیجیتال/صوتی و ایران‌کتاب و شهر کتاب آنلاین برای کتاب چاپی مناسب‌ترند.';
+        if(t.includes('امن') || t.includes('اعتماد')) return 'قبل از خرید، نماد اعتماد، آدرس و شماره تماس، قوانین مرجوعی، گارانتی، امتیاز فروشنده و تجربه کاربران را بررسی کنید. پرشیا شاپ پرداختی دریافت نمی‌کند.';
+        const maybeProduct = text.trim().length > 2;
+        if(maybeProduct) return `اگر منظورتان خرید «${text}» است، آن را در جستجوی واقعی پرشیا شاپ وارد کنید تا لینک فروشگاه‌های معتبر ساخته شود. اگر پاسخ کافی نبود از بخش ارتباط با ما پیام بدهید: <a href="mailto:${CONTACT}">${CONTACT}</a>`;
+        return `پاسخ دقیق پیدا نکردم. لطفاً سوال را واضح‌تر بنویسید یا از بخش ارتباط با ما پیام بدهید: <a href="mailto:${CONTACT}">${CONTACT}</a>`;
+    };
+    window.openAIPopup = () => { const pop=$('aiPopup'); pop?.classList.add('open'); renderChatbot(); };
+    window.closeAIPopup = () => $('aiPopup')?.classList.remove('open');
+    window.renderChatbot = () => {
+        const title = document.querySelector('#aiPopup .hd h2'); if(title) title.textContent = '🤖 چت‌بات راهنمای خرید پرشیا شاپ';
+        const list = $('aiQuestionsList'); const ans = $('aiAnswerBox');
+        if(list) list.innerHTML = `<div class="chat-wrap"><div class="chat-log" id="chatLog"><div class="chat-msg bot">سلام! من راهنمای خرید پرشیا شاپ هستم. درباره انتخاب فروشگاه، مقایسه قیمت، امنیت خرید یا دسته‌بندی کالا بپرسید.</div></div><div class="chat-suggestions"><button onclick="sendBotSuggestion('برای خرید گوشی از کجا مقایسه کنم؟')">خرید گوشی</button><button onclick="sendBotSuggestion('چطور خرید امن داشته باشم؟')">خرید امن</button><button onclick="sendBotSuggestion('راه ارتباط با شما چیست؟')">ارتباط با ما</button></div><div class="chat-input-row"><input id="chatInput" placeholder="پیام خود را بنویسید..." onkeypress="if(event.key==='Enter')sendChatMessage()"><button onclick="sendChatMessage()">ارسال</button></div></div>`;
+        if(ans) ans.style.display='none';
+    };
+    window.sendBotSuggestion = q => { const inp=$('chatInput'); if(inp) inp.value=q; sendChatMessage(); };
+    window.sendChatMessage = () => {
+        const inp=$('chatInput'), log=$('chatLog'); if(!inp||!log) return; const q=inp.value.trim(); if(!q) return;
+        log.insertAdjacentHTML('beforeend', `<div class="chat-msg user">${q}</div>`); inp.value='';
+        setTimeout(()=>{ log.insertAdjacentHTML('beforeend', `<div class="chat-msg bot">${botReply(q)}<br><button class="mini-action" style="height:32px;margin-top:8px" onclick="openContactModal()">ارتباط با ما</button></div>`); log.scrollTop=log.scrollHeight; }, 350);
+        log.scrollTop=log.scrollHeight;
+    };
+})();
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0ff18b99c65e301',t:'MTc4MjE3MTYxMQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
